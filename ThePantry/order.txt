@@ -1,0 +1,73 @@
+1. Start with Models
+
+    Why: The models represent the core data of your application. These are the entities that will be stored in the database and will be the foundation for other layers.
+
+    Concrete classes: Start by defining your models (Ingredient, Measurement, Recipe) based on the interfaces you’ve already created. Make sure to include constructors, properties, and basic validation if needed.
+
+    Steps:
+        Write the concrete implementations of the models (Ingredient, Measurement, Recipe) based on their interfaces.
+        Ensure the relationships between the models (e.g., Measurement references Ingredient and Recipe by ID) are implemented properly.
+
+2. DTOs (Data Transfer Objects)
+
+    Why: DTOs are used to transfer data between layers, especially between the service and presentation layers (e.g., controllers). These should be simple, containing only the fields necessary for data transfer.
+
+    Concrete classes: Create the concrete classes for the DTOs (IngredientDTO, MeasurementDTO, RecipeDTO).
+
+    Steps:
+        Implement any necessary constructors and transformation logic (e.g., mapping between models and DTOs in the service layer).
+        Focus on keeping DTOs lightweight and focused on the specific data needed by the client.
+
+3. Repositories
+
+    Why: Repositories are responsible for data access (CRUD operations). You’ll need to ensure the repositories can perform operations on the database using the models.
+
+    Concrete classes: Implement the repository concrete classes (IngredientRepository, RecipeRepository, MeasurementRepository).
+
+    Steps:
+        Start with the basic CRUD operations (Add, Update, Delete, GetById, GetAll).
+        Implement more specific operations as defined in your interfaces (e.g., GetAllMeasurementsForRecipe()).
+        Ensure you use the UnitOfWork pattern to manage transactions across repositories.
+
+4. Services
+
+    Why: Services contain business logic and orchestrate calls to the repositories. They also handle more complex operations that involve multiple repositories or applying business rules.
+
+    Concrete classes: Implement the service layer classes (IngredientService, RecipeService, MeasurementService).
+
+    Steps:
+        Write logic for methods like PricePerPortion, CalculateTotalPriceForRecipe, and other business-related calculations.
+        Implement DTO transformation methods (e.g., MapToDTO, MapToIngredient).
+        Ensure the service layer is interacting with the repositories in a clean, decoupled way.
+
+5. UnitOfWork
+
+    Why: UnitOfWork helps group multiple operations that need to happen in a single transaction (e.g., saving a recipe and its associated measurements).
+
+    Concrete class: Implement UnitOfWork and ensure it handles committing all repository changes within a single transaction.
+
+    Steps:
+        Ensure UnitOfWork correctly manages the repositories (Ingredients, Recipes, Measurements).
+        Implement the Commit method to handle saving changes across multiple repositories.
+
+6. Controllers
+
+    Why: Controllers handle HTTP requests in the WebAPI. They should delegate work to the services and return the appropriate response to the client.
+
+    Concrete classes: Implement the controllers (IngredientsController, RecipesController, MeasurementsController).
+
+    Steps:
+        Use the services to handle requests in the controllers.
+        Implement CRUD endpoints for managing ingredients, recipes, and measurements.
+        Make sure the controller is lightweight and focuses on handling the HTTP layer.
+
+Summary of the Sequence:
+
+    Models: Concrete models based on your interfaces.
+    DTOs: Lightweight objects for transferring data between layers.
+    Repositories: Data access layer for CRUD operations.
+    Services: Business logic and orchestration of operations.
+    UnitOfWork: Managing transactions across repositories.
+    Controllers: Exposing the functionality via API endpoints.
+
+This approach builds up from the core models and database interaction to the API and business logic, ensuring everything is layered and structured properly.

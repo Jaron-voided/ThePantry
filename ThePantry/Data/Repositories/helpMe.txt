@@ -1,0 +1,9 @@
+Repositories act as intermediaries between the data access layer and the rest of your application, providing an abstraction over database operations.
+ Each repository will be responsible for CRUD (Create, Read, Update, Delete) operations for a specific model (e.g., Recipe, Ingredient, Measurement).
+
+    Repositories Folder: This folder contains individual repository classes like RecipeRepository, IngredientRepository, and MeasurementRepository.
+        IngredientRepository: Handles database operations related to Ingredients, such as fetching, adding, updating, and deleting ingredients.
+        RecipeRepository: Handles database operations related to Recipes.
+        MeasurementRepository: Manages database operations for Measurements.
+
+Each repository will interact directly with the DB helper class (or ADO.NET) to execute SQL commands.

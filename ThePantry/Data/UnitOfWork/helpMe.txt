@@ -1,0 +1,8 @@
+The UnitOfWork pattern helps to manage transactions and coordination across multiple repositories. 
+It ensures that all operations across repositories can be committed as a single transaction, reducing the risk of inconsistencies.
+
+    UnitOfWork Interface:
+        It exposes properties for each repository (IIngredientRepository, IRecipeRepository, IMeasurementRepository).
+        It has a Commit() method that ensures all the changes made within a transaction are saved to the database at once.
+    UnitOfWork Class: Implements the IUnitOfWork interface, ensuring that when Commit is called, it commits all changes made to the repositories.
+

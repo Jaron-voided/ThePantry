@@ -1,0 +1,47 @@
+Yes, you will still need the Services folder even after you create controllers and turn your application into a WebAPI. 
+The Service layer plays an important role in the architecture by acting as the intermediary between the controllers (or the presentation layer) 
+and the repositories (or the data access layer). Here's how the Services folder fits into the architecture:
+1. What the Service Layer Does
+
+The service layer contains business logic and orchestrates complex operations that might involve multiple repositories or 
+business rules. It decouples the controllers from the repositories, so the controller doesn't need to directly access the database or know how the data is fetched.
+
+For example:
+
+    IngredientService:
+        Handles ingredient-related logic, such as calculating price per portion, transforming ingredients into DTOs, 
+        or applying specific business rules related to ingredient management.
+        Calls the IngredientRepository to interact with the database.
+    RecipeService:
+        Orchestrates recipe-related operations, such as calculating total price per recipe or price per serving.
+        May interact with the RecipeRepository for recipe data and the MeasurementRepository for measurement data.
+
+2. Services in Relation to Controllers
+
+The controllers in a WebAPI handle HTTP requests, but they shouldn't contain business logic or handle direct database access. 
+Instead, they delegate work to the services.
+
+For example, in a typical controller:
+
+    When a user sends an HTTP request to create a new recipe, the controller will pass the data to the RecipeService.
+    The RecipeService applies any necessary business rules and uses the RecipeRepository to save the recipe to the database.
+
+In this architecture:
+
+    Controllers: Handle HTTP requests and responses, calling the appropriate service method.
+    Services: Contain business logic and orchestrate the calls to the repositories.
+    Repositories: Directly interact with the database and perform CRUD operations.
+
+3. Responsibilities of the Service Layer
+
+Here are some key responsibilities of the service layer in a WebAPI:
+
+    Business Logic: The service layer contains the logic that decides how the application behaves. For example, 
+    if you need to calculate the price per portion for an ingredient or validate a recipe before saving, this logic goes into the service layer.
+
+    Data Transformation: Services can transform data between different formats. For example, they can convert DTOs 
+    (Data Transfer Objects) to domain models and vice versa.
+
+    Orchestrating Multiple Repositories: If you need to work with data from multiple repositories, the service layer 
+    will coordinate the operations across them. For example, when creating a recipe, you might need to access both the 
+    RecipeRepository and the MeasurementRepository.

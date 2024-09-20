@@ -1,0 +1,3 @@
+The SqlPantryDatabase class creates tables and initializes the database structure when your application runs.
+It is focused on managing the creation and setup of the database but is no longer responsible for performing 
+individual database queries or operations. Those responsibilities have been delegated to the repositories.
