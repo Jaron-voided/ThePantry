@@ -1,16 +1,19 @@
+using System.Text.Json.Serialization;
 using ThePantry.Models.Extras;
 
 namespace ThePantry.Models.DTOs;
 
 public class IngredientDTO
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-    public Categories.MeasuredIn MeasuredIn { get; set; }
-    public Categories.IngredientCategory IngredientCategory { get; set; }
-    public decimal PricePerPackage { get; set; }
-    public int MeasurementsPerPackage { get; set; }
+    public Guid Id { get; init; }
+    public string Name { get; init; }
+    public Categories.MeasuredIn MeasuredIn { get; init; }
+    public Categories.IngredientCategory IngredientCategory { get; init; }
+    public decimal PricePerPackage { get; init; }
+    public int MeasurementsPerPackage { get; init; }
     
     // Calculated Property
+    // Exclude from serialization
+    [JsonIgnore]
     public decimal PricePerMeasurement { get; set; }
 }

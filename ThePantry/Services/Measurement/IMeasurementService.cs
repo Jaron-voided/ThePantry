@@ -11,4 +11,9 @@ public interface IMeasurementService
     // DTO mapping
     MeasurementDTO MapToDTO(IMeasurement measurement);
     IMeasurement MapToMeasurement(MeasurementDTO measurement);
+    IEnumerable<MeasurementDTO> GetMeasurementsByRecipe(Guid recipeId);
+    MeasurementDTO GetById(Guid id);
+    void AddMeasurement(IMeasurement ingredient);
+    void UpdateMeasurement(IMeasurement updatedMeasurement);
+    void DeleteMeasurement(IMeasurement ingredientToDelete);
 }

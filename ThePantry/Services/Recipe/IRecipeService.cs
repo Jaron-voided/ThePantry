@@ -1,4 +1,5 @@
 using ThePantry.Models.DTOs;
+using ThePantry.Models.Measurement;
 using ThePantry.Models.Recipe;
 
 namespace ThePantry.Services.Recipe;
@@ -6,14 +7,22 @@ namespace ThePantry.Services.Recipe;
 public interface IRecipeService
 {
     //Methods for calculated properties
-    float CalculateTotalPriceForRecipe(IRecipe recipe);
-    float CalculatePricePerServing(IRecipe recipe);
+    decimal CalculateTotalPriceForRecipe(IRecipe recipe);
+    decimal CalculatePricePerServing(IRecipe recipe);
+
+    IEnumerable<IMeasurement> GetAllMeasurementsForRecipe(Guid recipeId);
     
     // DTO Mapping
-    RecipeDTO MapToDTO(Models.Recipe.Recipe recipe);
+    RecipeDTO MapToDTO(IRecipe recipe);
     IRecipe MapToRecipe(RecipeDTO recipeDTO);
     
     // Additional Methods
     string ConvertInstructionsToJson(IRecipe recipe);
-    string RecipeToString(IRecipe recipe);
+    
+    // Repository wrappers
+    IEnumerable<RecipeDTO> GetAllRecipes();
+    RecipeDTO GetById(Guid id);
+    void AddRecipe(IRecipe recipe);
+    void UpdateRecipe(IRecipe updatedRecipe);
+    void DeleteRecipe(IRecipe recipeToDelete);
 }

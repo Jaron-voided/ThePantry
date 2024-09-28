@@ -4,10 +4,9 @@ namespace ThePantry.Models.DTOs;
 
 public class RecipeDTO
 {
-    Guid Id { get; set; }
-    string Name { get; set; }
-    Categories.RecipeCategory RecipeCategory { get; set; }
-    List<Guid> MeasurementIds { get; set; }
-    List<string> Instructions { get; set; }
-    int ServingsPerRecipe { get; set; }
+    public Guid Id { get; init; }
+    public string Name { get; init; }
+    public Categories.RecipeCategory RecipeCategory { get; init; }
+    public List<string> Instructions { get; init; }
+    public int ServingsPerRecipe { get; init; }
 }

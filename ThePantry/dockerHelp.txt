@@ -1,0 +1,108 @@
+Certainly! Here is a summary of the key steps and commands to establish your SQL Server instance in Docker and connect to it for setting up your database:
+1. Starting SQL Server in Docker
+
+    Command:
+
+    bash
+
+    sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=N0t0ri0us!" -p 1433:1433 --name sql1 -d mcr.microsoft.com/mssql/server:2022-latest
+
+    This command sets up and runs a Docker container named sql1 with the latest version of SQL Server. The password for the SA user is N0t0ri0us!, and the SQL Server will listen on port 1433.
+
+2. Connecting to the Running Docker Container
+
+    Check Running Containers:
+
+    bash
+
+sudo docker ps
+
+Connecting to the Docker container:
+
+bash
+    sudo docker start sql1
+    sudo docker exec -it sql1 "bash"
+
+    This will allow you to run commands inside the running sql1 container.
+
+3. Using SQLCMD to Connect to SQL Server
+
+    Once inside the container:
+
+    bash
+
+    /opt/mssql-tools18/bin/sqlcmd -S localhost -U izaya -P 'N0t0ri0us!' -C
+
+    SELECT name FROM sys.databases;
+    GO
+
+    This command connects to the SQL Server instance running in the Docker container using the SA user.
+
+4. Database Operations with SQLCMD
+
+    Creating a Database:
+
+    sql
+
+    CREATE DATABASE the_pantry;
+    GO
+
+    You can now create tables, insert data, and perform other database operations within this session.
+
+5. Fixing Connection Issues
+
+    If SSL issues arise:
+
+    bash
+
+    /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P 'N0t0ri0us!' -C
+
+    The -C flag can be used to trust the self-signed certificate.
+
+Notes:
+
+    Ensure you are using the correct path to sqlcmd (in this case, /opt/mssql-tools18/bin/sqlcmd).
+    Make sure that the container is running before trying to connect to it (sudo docker ps).
+    If the database is not found, confirm that it has been created successfully and that the connection string in your application matches the database name and credentials.
+
+This sequence should help you recreate the setup and connect to your Docker-hosted SQL Server instance effectively.
+
+
+
+To change the owner of the database from SA to izaya, you can follow these steps in SQL Server:
+
+    Log into the SQL Server as SA:
+
+    bash
+
+/opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P 'N0t0ri0us!'
+
+Switch to your database (the_pantry):
+
+sql
+
+USE the_pantry;
+GO
+
+Create a new login for izaya if it does not already exist:
+
+sql
+
+CREATE LOGIN izaya WITH PASSWORD = 'YourStrongPassword';
+GO
+
+Create a database user for izaya:
+
+sql
+
+CREATE USER izaya FOR LOGIN izaya;
+GO
+
+Change the database owner to izaya:
+
+sql
+
+    ALTER AUTHORIZATION ON DATABASE::the_pantry TO izaya;
+    GO
+
+This will make izaya the owner of the the_pantry database. Remember to replace 'YourStrongPassword' with a secure password for izaya.

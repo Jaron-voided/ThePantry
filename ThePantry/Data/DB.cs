@@ -1,12 +1,11 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System.IO;
 
 namespace ThePantry.Data
 {
     public static class DB
     {
-        private static string ConnectionString;
+        private static readonly string _connectionString;
 
         static DB()
         {
@@ -15,8 +14,10 @@ namespace ThePantry.Data
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
-            ConnectionString = configuration.GetConnectionString("DevelopmentDatabase");
+            _connectionString = configuration.GetConnectionString("DevelopmentDatabase");
         }
+        
+        public static string ConnectionString => _connectionString;
 
         private static SqlConnection CreateConnection()
         {
@@ -46,7 +47,12 @@ namespace ThePantry.Data
             {
                 using var connection = CreateConnection();
                 using var command = new SqlCommand(commandText, connection);
-                command.Parameters.AddRange(parameters ?? throw new ArgumentNullException(nameof(parameters)));
+                // Only add parameters if they are provided
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+                
                 command.ExecuteNonQuery();
             }
             catch (SqlException ex)

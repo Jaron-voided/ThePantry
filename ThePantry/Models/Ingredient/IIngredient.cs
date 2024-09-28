@@ -12,5 +12,5 @@ public interface IIngredient
     public int MeasurementsPerPackage { get; set; }
     
     //Calculated Properties
-    public decimal PricePerMeasurement { get; set; }
+    public decimal PricePerMeasurement { get; }
 }
