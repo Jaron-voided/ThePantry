@@ -1,0 +1,10 @@
+{
+  "id": "d0247b76-e9ac-4885-994d-148ebc9deb2f",
+  "name": "Simple Pancakes",
+  "recipeCategory": 2,
+  "instructions": [
+    "Mix flour, milk, eggs, and sugar.",
+    "Cook on skillet until golden."
+  ],
+  "servingsPerRecipe": 2
+}

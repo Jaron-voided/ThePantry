@@ -1,0 +1,11 @@
+{
+  "id": "646e12ad-34d7-483a-8fd6-be60f9d8b689",
+  "name": "Beef Stir Fry",
+  "recipeCategory": 4,
+  "instructions": [
+    "Slice beef.",
+    "Stir-fry with carrots, broccoli, and soy sauce.",
+    "Serve over rice."
+  ],
+  "servingsPerRecipe": 3
+}

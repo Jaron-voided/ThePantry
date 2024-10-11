@@ -1,0 +1,95 @@
+### Add 8 Recipes ###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Grilled Chicken Salad",
+  "recipeCategory": 3,
+  "instructions": ["Grill chicken.", "Chop lettuce, carrots, and apples.", "Mix with balsamic vinegar."],
+  "servingsPerRecipe": 2
+}
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Beef Stir Fry",
+  "recipeCategory": 4,
+  "instructions": ["Slice beef.", "Stir-fry with carrots, broccoli, and soy sauce.", "Serve over rice."],
+  "servingsPerRecipe": 3
+}
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Spaghetti Bolognese",
+  "recipeCategory": 4,
+  "instructions": ["Cook pasta.", "Brown ground turkey, add tomatoes and spices.", "Mix with pasta."],
+  "servingsPerRecipe": 4
+}
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Apple Pie",
+  "recipeCategory": 5,
+  "instructions": ["Make dough.", "Slice apples and mix with cinnamon and sugar.", "Bake in oven."],
+  "servingsPerRecipe": 6
+}
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Cheese Omelette",
+  "recipeCategory": 2,
+  "instructions": ["Whisk eggs.", "Add cheddar cheese.", "Cook on skillet until firm."],
+  "servingsPerRecipe": 1
+}
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Banana Smoothie",
+  "recipeCategory": 2,
+  "instructions": ["Blend bananas, milk, and a pinch of cinnamon until smooth."],
+  "servingsPerRecipe": 1
+}
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Roasted Vegetables",
+  "recipeCategory": 4,
+  "instructions": ["Chop potatoes, carrots, and peppers.", "Drizzle with olive oil.", "Roast until tender."],
+  "servingsPerRecipe": 2
+}
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Simple Pancakes",
+  "recipeCategory": 2,
+  "instructions": ["Mix flour, milk, eggs, and sugar.", "Cook on skillet until golden."],
+  "servingsPerRecipe": 2
+}

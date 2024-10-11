@@ -1,5 +1,6 @@
 using Microsoft.Data.SqlClient;
 using ThePantry.Models.Extras;
+using ThePantry.Models.Ingredient;
 using ThePantry.Models.Recipe;
 
 namespace ThePantry.Data.Repositories;
@@ -10,19 +11,51 @@ public class RecipeRepository(SqlConnection connection) : IRecipeRepository
 
     public void Add(IRecipe recipe)
     {
-        const string insertCommandText = @"INSERT INTO Recipe (Id, Name, RecipeCategory, Instructions, ServingsPerRecipe)
-                                           VALUES (@id, @name, @recipeCategory, @instructions, @servingsPerRecipe);";
+        recipe.Id = Guid.NewGuid();
+        // Log details for debugging
+        Console.WriteLine($"Adding Recipe: {recipe.Name}");
+        Console.WriteLine($"ID: {recipe.Id}");
+        Console.WriteLine($"Category: {recipe.RecipeCategory}");
+        Console.WriteLine($"Instructions: {string.Join(";", recipe.Instructions)}");
+        Console.WriteLine($"Servings Per Recipe: {recipe.ServingsPerRecipe}");
 
+        // SQL command to insert recipe
+        const string insertCommandText = @"INSERT INTO Recipe (Id, Name, RecipeCategory, Instructions, ServingsPerRecipe)
+                                       VALUES (@id, @name, @recipeCategory, @instructions, @servingsPerRecipe);";
+
+        // Format instructions as a semicolon-separated string
+        string formattedInstructions = string.Join(";", recipe.Instructions);
+
+        // Log formatted instructions for debugging
+        Console.WriteLine($"Formatted Instructions: {formattedInstructions}");
+
+        // SQL parameters
         SqlParameter[] parameters =
         {
             new SqlParameter("@id", recipe.Id),
             new SqlParameter("@name", recipe.Name),
             new SqlParameter("@recipeCategory", (int)recipe.RecipeCategory),
-            new SqlParameter("@instructions", string.Join(";", recipe.Instructions)), // Assuming instructions are stored as a semicolon-separated string
+            new SqlParameter("@instructions", formattedInstructions),
             new SqlParameter("@servingsPerRecipe", recipe.ServingsPerRecipe)
         };
 
-        DB.ExecuteNonQuery(insertCommandText, parameters);
+        // Log parameters to ensure they are set correctly
+        foreach (var param in parameters)
+        {
+            Console.WriteLine($"Parameter: {param.ParameterName} = {param.Value}");
+        }
+
+        // Execute the insert command
+        try
+        {
+            DB.ExecuteNonQuery(insertCommandText, parameters);
+            Console.WriteLine("Recipe added successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error while adding recipe: {ex.Message}");
+            throw;
+        }
     }
 
     public void Update(IRecipe recipe)

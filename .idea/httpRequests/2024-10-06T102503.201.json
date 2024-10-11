@@ -1,0 +1,11 @@
+{
+  "id": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+  "name": "Grilled Chicken Salad",
+  "recipeCategory": 3,
+  "instructions": [
+    "Grill chicken.",
+    "Chop lettuce, carrots, and apples.",
+    "Mix with balsamic vinegar."
+  ],
+  "servingsPerRecipe": 2
+}

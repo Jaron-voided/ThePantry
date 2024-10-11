@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7995ea46-9f05-4863-9297-87d8f8e45620" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Requests/IngredientRequests.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Requests/MeasurementRequests.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Requests/RecipeRequests.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Requests/RetrieveRequests.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/app/layout/layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/ingredient/ViewIngredientPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/measurements/measurement.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/recipe/addRecipePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/recipe/recipeStyles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/recipe/viewRecipePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/AddIngredient.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/AddIngredientForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredient.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredientForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/IngredientsList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/ViewIngredient.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurements.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurementsForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Navbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/pages/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/pages/Ingredients/EditIngredientPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/pages/Ingredients/ViewIngredientPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/pages/Measurements/AddMeasurementsPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/services/apiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pantry-frontend/src/utils/enumHelpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThePantry/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThePantry/Controllers/IngredientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Controllers/IngredientsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThePantry/Controllers/RecipesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Controllers/RecipesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThePantry/Data/Repositories/RecipeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Data/Repositories/RecipeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThePantry/Models/DTOs/IngredientDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Models/DTOs/IngredientDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThePantry/Startup/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Startup/Program.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2mtm2irFoantGQDdnfi8tfdMrY6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.All in IngredientRequests.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in MeasurementRequests (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in MeasurementRequests.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in RecipeRequests (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in RecipeRequests.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.IngredientRequests | Add 20 Ingredients ######.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | #2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | #2.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | #3.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | Get All Ingredients ###### (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | Get All Ingredients ######.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/zeref-dragneel/RiderProjects/ThePantry&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/404/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/measurements" />
+      <recent name="$PROJECT_DIR$/pantry-frontend/src/pages/Measurements" />
+      <recent name="$PROJECT_DIR$/pantry-frontend/src/pages/Recipes" />
+      <recent name="$PROJECT_DIR$/Requests" />
+      <recent name="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/ingredient" />
+    </key>
+  </component>
+  <component name="RunManager" selected="HTTP Request.RetrieveRequests | #3">
+    <configuration name="All in MeasurementRequests (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Requests/MeasurementRequests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in RecipeRequests (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Requests/RecipeRequests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="RetrieveRequests | Get All Ingredients ###### (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Requests/RetrieveRequests.http" requestIdentifier="Get All Ingredients ######" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="RetrieveRequests | #2 (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Requests/RetrieveRequests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="RetrieveRequests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/Requests/RetrieveRequests.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.RetrieveRequests | #3" />
+        <item itemvalue="HTTP Request.RetrieveRequests | #2 (1)" />
+        <item itemvalue="HTTP Request.All in MeasurementRequests (1)" />
+        <item itemvalue="HTTP Request.RetrieveRequests | Get All Ingredients ###### (1)" />
+        <item itemvalue="HTTP Request.All in RecipeRequests (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.22855.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7995ea46-9f05-4863-9297-87d8f8e45620" name="Changes" comment="" />
+      <created>1727904042789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727904042789</updated>
+      <workItem from="1727904043920" duration="12507000" />
+      <workItem from="1727981191990" duration="5557000" />
+      <workItem from="1728045445944" duration="5221000" />
+      <workItem from="1728050729749" duration="1571000" />
+      <workItem from="1728133030212" duration="10957000" />
+      <workItem from="1728218382878" duration="4064000" />
+      <workItem from="1728224638619" duration="3341000" />
+      <workItem from="1728244928180" duration="2027000" />
+      <workItem from="1728477046691" duration="13268000" />
+      <workItem from="1728564632926" duration="536000" />
+      <workItem from="1728565182920" duration="2388000" />
+      <workItem from="1728569141422" duration="4381000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,12 @@
+### Get All Ingredients ###
+GET https://localhost:5001/api/ingredients
+
+###
+
+### Get All Recipes ###
+GET https://localhost:5001/api/recipes
+
+###
+
+### Get All Measuirements ###
+GET https://localhost:5001/api/measurements

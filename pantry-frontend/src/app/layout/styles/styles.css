@@ -1,0 +1,261 @@
+/* Navbar styles */
+nav {
+  background-color: #98FF98; /* Mint green */
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display links in a row */
+  justify-content: space-evenly; /* Evenly space out items */
+  align-items: center; /* Center items vertically */
+  height: 50px; /* Set a fixed height for the navbar */
+}
+
+nav ul li {
+  flex: 1; /* Each link takes up an equal amount of space */
+  text-align: center; /* Center the text inside each link */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set font color to black */
+  font-weight: bold; /* Make the text bold */
+  display: block;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #B2FFB2; /* A lighter shade of mint green on hover */
+  color: darkgrey; /* Change text color on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #FFB6B9; /* Light coral */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px;
+  position: fixed; /* Stick to the bottom of the viewport */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+/* Centering Content */
+.content {
+  text-align: center; /* Center text */
+  margin: 0 auto;
+  padding-top: 20px; /* Space from top */
+  padding-bottom: 100px;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif; /* A clean font */
+  background-color: #AFEEEE; /* Pale turquoise background for the page */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the page takes up the full height */
+}
+
+/* "Add New" Navbar styles */
+nav.add-navbar {
+  background-color: #FFB6B9; /* Light coral */
+  padding: 10px 20px;
+  margin-bottom: 20px; /* Add space below the navbar */
+}
+
+nav.add-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display links in a row */
+  justify-content: center; /* Center the single item */
+  align-items: center;
+  height: 40px; /* Set a height for the navbar */
+}
+
+nav.add-navbar ul li {
+  text-align: center;
+}
+
+nav.add-navbar ul li a {
+  text-decoration: none;
+  color: black; /* Black text for contrast */
+  font-weight: bold;
+  display: block;
+  padding: 8px 16px;
+}
+
+nav.add-navbar ul li a:hover {
+  background-color: #FFCCCC; /* Slightly lighter coral on hover */
+  color: darkgrey; /* White text on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Container styles */
+.ingredients-container {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* List styles */
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between rows */
+  margin: 0 auto;
+  max-width: 800px; /* Limit the max width for better layout */
+}
+
+/* Row styles */
+.ingredient-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #383434;
+  padding: 15px;
+  background-color: lightgray;
+  border-radius: 5px;
+  font-size: 18px; /* Larger font */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ingredient name */
+.ingredient-name {
+  flex-grow: 1;
+  text-align: left; /* Align text to the left */
+}
+
+/* Button group styles */
+.button-group {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Button styles */
+.view-button {
+  background-color: #98FF98; /* Mint green */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #FFE4B5; /* Pastel yellow/orange */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #FA8072; /* Salmon */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Button hover effects */
+.view-button:hover {
+  background-color: #B2FFB2; /* Slightly lighter mint green */
+}
+
+.edit-button:hover {
+  background-color: #FFDAB9; /* Slightly lighter pastel orange */
+}
+
+.delete-button:hover {
+  background-color: #FF9999; /* Slightly lighter salmon */
+}
+
+/* Add ingredient form and page */
+/* Container styles */
+.add-ingredient-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #FA8072; /* Salmon background */
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.add-ingredient-container h1 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+.add-ingredient-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-ingredient-form div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-ingredient-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.add-ingredient-form input,
+.add-ingredient-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+}
+
+/* Button styles */
+.add-ingredient-form button {
+  background-color: #98FF98; /* Mint green */
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.add-ingredient-form button:hover {
+  background-color: #B2FFB2; /* Lighter mint green on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .content {
+    padding-bottom: 120px;
+  }
+
+  .add-ingredient-container {
+    padding: 15px;
+  }
+
+  .add-ingredient-form input,
+  .add-ingredient-form select {
+    font-size: 0.9em;
+  }
+
+  .add-ingredient-form button {
+    font-size: 0.9em;
+  }
+}

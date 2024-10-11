@@ -1,0 +1,868 @@
+GET https://localhost:5001/api/measurements
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-06T103752.200.json
+
+###
+
+GET https://localhost:5001/api/recipes
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-06T103750.200.json
+
+###
+
+GET https://localhost:5001/api/measurements
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-06T103740.200.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 125
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "1940c32d-d1d7-4a2b-9591-f3dcb7b4ed14",
+"ingredientId": "ac06c797-0d31-4c51-a9cc-e32b63e0ef1a",
+"amount": 200
+}
+
+<> 2024-10-06T103653-1.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "1940c32d-d1d7-4a2b-9591-f3dcb7b4ed14",
+"ingredientId": "34eadbbc-6e23-4254-8591-eff006a025db",
+"amount": 1
+}
+
+<> 2024-10-06T103653.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "91ee6e21-9952-4b47-83ea-d436ef0571a1",
+"ingredientId": "63e264d0-d9ce-42f7-a3c2-14e0f4f8a7a1",
+"amount": 2
+}
+
+<> 2024-10-06T103652-10.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "646e12ad-34d7-483a-8fd6-be60f9d8b689",
+"ingredientId": "09e06d35-91e8-4159-9356-998f08c601b6",
+"amount": 1
+}
+
+<> 2024-10-06T103652-9.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "646e12ad-34d7-483a-8fd6-be60f9d8b689",
+"ingredientId": "dba10117-e25f-48be-9cdf-798feb8a8891",
+"amount": 1
+}
+
+<> 2024-10-06T103652-8.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "35a5cba5-3fe2-46d5-8c10-c3e60a36193b",
+"ingredientId": "f1e20654-ca04-4b1e-aff3-0b9721acf4e0",
+"amount": 1
+}
+
+<> 2024-10-06T103652-7.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "35a5cba5-3fe2-46d5-8c10-c3e60a36193b",
+"ingredientId": "6b819d84-5a18-4306-9c3b-ff7c6bef9dc4",
+"amount": 2
+}
+
+<> 2024-10-06T103652-6.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "3045fd5c-27ad-4547-9c48-735397d35148",
+"ingredientId": "d228d236-9bba-4c85-ab9b-1bbff80d98c5",
+"amount": 1
+}
+
+<> 2024-10-06T103652-5.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "3045fd5c-27ad-4547-9c48-735397d35148",
+"ingredientId": "f0b9cb15-f02c-4929-9753-6c95a0ddb37f",
+"amount": 3
+}
+
+<> 2024-10-06T103652-4.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "6274870b-6d05-47c1-a3b5-5fc8bdb3108d",
+"ingredientId": "30087bb2-6914-4ff7-a696-9ce1513ed810",
+"amount": 1
+}
+
+<> 2024-10-06T103652-3.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "6274870b-6d05-47c1-a3b5-5fc8bdb3108d",
+"ingredientId": "09e06d35-91e8-4159-9356-998f08c601b6",
+"amount": 1
+}
+
+<> 2024-10-06T103652-2.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+"ingredientId": "d96fd73d-7fdb-4519-864d-90b68e9b965e",
+"amount": 1
+}
+
+<> 2024-10-06T103652-1.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 123
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+"recipeId": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+"ingredientId": "dbe3218e-f1e8-461c-bea3-ecd5b82febc4",
+"amount": 1
+}
+
+<> 2024-10-06T103652.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 129
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "recipeId": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+  "ingredientId": "329d4371-8df3-4e9f-9494-2bb66b155bff",
+  "amount": 1
+}
+
+<> 2024-10-06T103651.201.json
+
+###
+
+GET https://localhost:5001/api/recipes
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-06T103149.200.json
+
+###
+
+GET https://localhost:5001/api/ingredients
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-06T103111.200.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 170
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Simple Pancakes",
+  "recipeCategory": 2,
+  "instructions": ["Mix flour, milk, eggs, and sugar.", "Cook on skillet until golden."],
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T102504.201.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 193
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Roasted Vegetables",
+  "recipeCategory": 4,
+  "instructions": ["Chop potatoes, carrots, and peppers.", "Drizzle with olive oil.", "Roast until tender."],
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T102503-6.201.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 162
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Banana Smoothie",
+  "recipeCategory": 2,
+  "instructions": ["Blend bananas, milk, and a pinch of cinnamon until smooth."],
+  "servingsPerRecipe": 1
+}
+
+<> 2024-10-06T102503-5.201.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 169
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Cheese Omelette",
+  "recipeCategory": 2,
+  "instructions": ["Whisk eggs.", "Add cheddar cheese.", "Cook on skillet until firm."],
+  "servingsPerRecipe": 1
+}
+
+<> 2024-10-06T102503-4.201.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 175
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Apple Pie",
+  "recipeCategory": 5,
+  "instructions": ["Make dough.", "Slice apples and mix with cinnamon and sugar.", "Bake in oven."],
+  "servingsPerRecipe": 6
+}
+
+<> 2024-10-06T102503-3.201.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 187
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Spaghetti Bolognese",
+  "recipeCategory": 4,
+  "instructions": ["Cook pasta.", "Brown ground turkey, add tomatoes and spices.", "Mix with pasta."],
+  "servingsPerRecipe": 4
+}
+
+<> 2024-10-06T102503-2.201.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 184
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Beef Stir Fry",
+  "recipeCategory": 4,
+  "instructions": ["Slice beef.", "Stir-fry with carrots, broccoli, and soy sauce.", "Serve over rice."],
+  "servingsPerRecipe": 3
+}
+
+<> 2024-10-06T102503-1.201.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 192
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Grilled Chicken Salad",
+  "recipeCategory": 3,
+  "instructions": ["Grill chicken.", "Chop lettuce, carrots, and apples.", "Mix with balsamic vinegar."],
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T102503.201.json
+
+###
+
+GET https://localhost:5001/api/recipes
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-06T093333.200.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 165
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Simple Pancakes",
+  "recipeCategory": 2,
+  "instructions": "Mix flour, milk, eggs, and sugar. Cook on skillet until golden.",
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T093218-3.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 185
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Roasted Vegetables",
+  "recipeCategory": 4,
+  "instructions": "Chop potatoes, carrots, and peppers. Drizzle with olive oil, roast until tender.",
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T093218-2.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 160
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Banana Smoothie",
+  "recipeCategory": 2,
+  "instructions": "Blend bananas, milk, and a pinch of cinnamon until smooth.",
+  "servingsPerRecipe": 1
+}
+
+<> 2024-10-06T093218-1.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 161
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Cheese Omelette",
+  "recipeCategory": 2,
+  "instructions": "Whisk eggs. Add cheddar cheese, cook on skillet until firm.",
+  "servingsPerRecipe": 1
+}
+
+<> 2024-10-06T093218.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 167
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Apple Pie",
+  "recipeCategory": 5,
+  "instructions": "Make dough. Slice apples and mix with cinnamon and sugar. Bake in oven.",
+  "servingsPerRecipe": 6
+}
+
+<> 2024-10-06T093217-3.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 179
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Spaghetti Bolognese",
+  "recipeCategory": 4,
+  "instructions": "Cook pasta. Brown ground turkey, add tomatoes and spices. Mix with pasta.",
+  "servingsPerRecipe": 4
+}
+
+<> 2024-10-06T093217-2.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 176
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Beef Stir Fry",
+  "recipeCategory": 4,
+  "instructions": "Slice beef, stir-fry with carrots, broccoli, and soy sauce. Serve over rice.",
+  "servingsPerRecipe": 3
+}
+
+<> 2024-10-06T093217-1.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 184
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Grilled Chicken Salad",
+  "recipeCategory": 3,
+  "instructions": "Grill chicken. Chop lettuce, carrots, and apples. Mix with balsamic vinegar.",
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T093217.400.json
+
+###
+
+GET https://localhost:5001/api/recipes
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-06T093120.200.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 165
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Simple Pancakes",
+  "recipeCategory": 2,
+  "instructions": "Mix flour, milk, eggs, and sugar. Cook on skillet until golden.",
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T093109-7.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 185
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Roasted Vegetables",
+  "recipeCategory": 4,
+  "instructions": "Chop potatoes, carrots, and peppers. Drizzle with olive oil, roast until tender.",
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T093109-6.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 160
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Banana Smoothie",
+  "recipeCategory": 2,
+  "instructions": "Blend bananas, milk, and a pinch of cinnamon until smooth.",
+  "servingsPerRecipe": 1
+}
+
+<> 2024-10-06T093109-5.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 161
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Cheese Omelette",
+  "recipeCategory": 2,
+  "instructions": "Whisk eggs. Add cheddar cheese, cook on skillet until firm.",
+  "servingsPerRecipe": 1
+}
+
+<> 2024-10-06T093109-4.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 167
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Apple Pie",
+  "recipeCategory": 5,
+  "instructions": "Make dough. Slice apples and mix with cinnamon and sugar. Bake in oven.",
+  "servingsPerRecipe": 6
+}
+
+<> 2024-10-06T093109-3.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 179
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Spaghetti Bolognese",
+  "recipeCategory": 4,
+  "instructions": "Cook pasta. Brown ground turkey, add tomatoes and spices. Mix with pasta.",
+  "servingsPerRecipe": 4
+}
+
+<> 2024-10-06T093109-2.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 176
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Beef Stir Fry",
+  "recipeCategory": 4,
+  "instructions": "Slice beef, stir-fry with carrots, broccoli, and soy sauce. Serve over rice.",
+  "servingsPerRecipe": 3
+}
+
+<> 2024-10-06T093109-1.400.json
+
+###
+
+POST https://localhost:5001/api/recipes
+Content-Type: application/json
+Content-Length: 184
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "name": "Grilled Chicken Salad",
+  "recipeCategory": 3,
+  "instructions": "Grill chicken. Chop lettuce, carrots, and apples. Mix with balsamic vinegar.",
+  "servingsPerRecipe": 2
+}
+
+<> 2024-10-06T093109.400.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 129
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "recipeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "ingredientId": "ac06c797-0d31-4c51-a9cc-e32b63e0ef1a",
+  "amount": 2
+}
+
+<> 2024-10-05T133939-7.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 129
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "recipeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "ingredientId": "d96fd73d-7fdb-4519-864d-90b68e9b965e",
+  "amount": 1
+}
+
+<> 2024-10-05T133939-6.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 129
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "recipeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "ingredientId": "14eaab8f-477b-4149-90bc-5ba8405ea859",
+  "amount": 1
+}
+
+<> 2024-10-05T133939-5.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 129
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "recipeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "ingredientId": "2fe94c14-919f-4289-8226-a37c029b5acc",
+  "amount": 1
+}
+
+<> 2024-10-05T133939-4.201.json
+
+###
+
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+Content-Length: 129
+User-Agent: IntelliJ HTTP Client/WebStorm 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+x-http2-scheme: https
+
+{
+  "recipeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "ingredientId": "dbe3218e-f1e8-461c-bea3-ecd5b82febc4",
+  "amount": 1
+}
+
+<> 2024-10-05T133939-3.201.json
+
+###
+

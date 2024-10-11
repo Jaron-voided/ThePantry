@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using ThePantry.Models.DTOs;
 using ThePantry.Services.Ingredient;
@@ -5,6 +6,7 @@ using ThePantry.Models.Ingredient;
 
 namespace ThePantry.Controllers;
 
+[EnableCors("AllowReactApp")]
 [ApiController]
 [Route("api/[controller]")]
 public class IngredientsController(IIngredientService ingredientService) : ControllerBase
@@ -34,15 +36,29 @@ public class IngredientsController(IIngredientService ingredientService) : Contr
     [HttpPost]
     public IActionResult CreateIngredient([FromBody] IngredientDTO ingredientDto)
     {
+        // Debug: log the received data
+        Console.WriteLine($"Received Ingredient: {ingredientDto.Name}, {ingredientDto.MeasuredIn}, {ingredientDto.IngredientCategory}");
+        Console.WriteLine($"Received measuredIn: {ingredientDto.MeasuredIn}");
+        Console.WriteLine($"Received ingredientCategory: {ingredientDto.IngredientCategory}");
+
+        
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState); // 400 if model validation fails
         }
 
-        var ingredient = ingredientService.MapToIngredient(ingredientDto);
-        ingredientService.AddIngredient(ingredient);
-        
-        return CreatedAtAction(nameof(GetIngredientById), new { id = ingredient.Id }, ingredient);
+        try
+        {
+            var ingredient = ingredientService.MapToIngredient(ingredientDto);
+            ingredientService.AddIngredient(ingredient);
+            return CreatedAtAction(nameof(GetIngredientById), new { id = ingredient.Id }, ingredient);
+        }
+        catch (Exception ex)
+        {
+            // Log the exception for debugging
+            Console.WriteLine($"Error occurred while adding ingredient: {ex.Message}");
+            return StatusCode(500, "Internal server error");
+        }
     }
     
     // PUT: api/Ingredients/{id}

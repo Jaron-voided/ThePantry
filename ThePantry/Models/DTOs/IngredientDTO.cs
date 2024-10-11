@@ -14,6 +14,13 @@ public class IngredientDTO
     
     // Calculated Property
     // Exclude from serialization
-    [JsonIgnore]
-    public decimal PricePerMeasurement { get; set; }
+    //[JsonIgnore]
+    //public decimal PricePerMeasurement PricePerMeasurement => PricePerPackage / MeasurementsPerPackage;
+    public decimal PricePerMeasurement
+    {
+        get
+        {
+            return PricePerPackage / MeasurementsPerPackage;
+        }
+    }
 }

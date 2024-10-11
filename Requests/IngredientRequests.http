@@ -1,0 +1,260 @@
+### Add 20 Ingredients ###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Salt",
+  "measuredIn": 0,
+  "ingredientCategory": 0,
+  "pricePerPackage": 1.50,
+  "measurementsPerPackage": 1000
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Chicken Breast",
+  "measuredIn": 0,
+  "ingredientCategory": 1,
+  "pricePerPackage": 8.00,
+  "measurementsPerPackage": 4
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Carrots",
+  "measuredIn": 0,
+  "ingredientCategory": 2,
+  "pricePerPackage": 2.00,
+  "measurementsPerPackage": 10
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Apples",
+  "measuredIn": 0,
+  "ingredientCategory": 3,
+  "pricePerPackage": 3.00,
+  "measurementsPerPackage": 6
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Milk",
+  "measuredIn": 1,
+  "ingredientCategory": 4,
+  "pricePerPackage": 2.50,
+  "measurementsPerPackage": 1
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Rice",
+  "measuredIn": 0,
+  "ingredientCategory": 5,
+  "pricePerPackage": 4.00,
+  "measurementsPerPackage": 20
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Olive Oil",
+  "measuredIn": 1,
+  "ingredientCategory": 6,
+  "pricePerPackage": 10.00,
+  "measurementsPerPackage": 2
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Flour",
+  "measuredIn": 0,
+  "ingredientCategory": 7,
+  "pricePerPackage": 2.50,
+  "measurementsPerPackage": 4
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Pepper",
+  "measuredIn": 0,
+  "ingredientCategory": 0,
+  "pricePerPackage": 1.20,
+  "measurementsPerPackage": 500
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Beef Steak",
+  "measuredIn": 0,
+  "ingredientCategory": 1,
+  "pricePerPackage": 12.00,
+  "measurementsPerPackage": 2
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Potatoes",
+  "measuredIn": 0,
+  "ingredientCategory": 2,
+  "pricePerPackage": 3.00,
+  "measurementsPerPackage": 5
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Bananas",
+  "measuredIn": 0,
+  "ingredientCategory": 3,
+  "pricePerPackage": 1.80,
+  "measurementsPerPackage": 6
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Cheddar Cheese",
+  "measuredIn": 0,
+  "ingredientCategory": 4,
+  "pricePerPackage": 4.50,
+  "measurementsPerPackage": 1
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Pasta",
+  "measuredIn": 0,
+  "ingredientCategory": 5,
+  "pricePerPackage": 3.00,
+  "measurementsPerPackage": 8
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Balsamic Vinegar",
+  "measuredIn": 1,
+  "ingredientCategory": 6,
+  "pricePerPackage": 7.00,
+  "measurementsPerPackage": 1
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Sugar",
+  "measuredIn": 0,
+  "ingredientCategory": 7,
+  "pricePerPackage": 2.00,
+  "measurementsPerPackage": 10
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Cinnamon",
+  "measuredIn": 0,
+  "ingredientCategory": 0,
+  "pricePerPackage": 1.50,
+  "measurementsPerPackage": 100
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Ground Turkey",
+  "measuredIn": 0,
+  "ingredientCategory": 1,
+  "pricePerPackage": 5.00,
+  "measurementsPerPackage": 4
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Lettuce",
+  "measuredIn": 0,
+  "ingredientCategory": 2,
+  "pricePerPackage": 1.20,
+  "measurementsPerPackage": 1
+}
+
+###
+
+POST https://localhost:5001/api/ingredients
+Content-Type: application/json
+
+{
+  "name": "Strawberries",
+  "measuredIn": 0,
+  "ingredientCategory": 3,
+  "pricePerPackage": 3.50,
+  "measurementsPerPackage": 20
+}
+

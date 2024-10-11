@@ -1,0 +1,11 @@
+{
+  "id": "3045fd5c-27ad-4547-9c48-735397d35148",
+  "name": "Apple Pie",
+  "recipeCategory": 5,
+  "instructions": [
+    "Make dough.",
+    "Slice apples and mix with cinnamon and sugar.",
+    "Bake in oven."
+  ],
+  "servingsPerRecipe": 6
+}

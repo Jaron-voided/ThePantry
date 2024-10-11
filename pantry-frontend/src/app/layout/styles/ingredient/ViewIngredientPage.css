@@ -1,0 +1,51 @@
+/* ViewIngredientPage.css */
+
+/* General container styling */
+.ingredient-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f2f2f2; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial, sans-serif';
+}
+
+/* Header styling */
+.ingredient-header {
+    font-size: 1.8rem;
+    color: #005f73; /* Darker color to match your scheme */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Table-like rows */
+.ingredient-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: label and value */
+    gap: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+/* Each row in the details */
+.ingredient-row {
+    padding: 0.5rem;
+    background-color: #e0f4f4; /* Pale turquoise to match your scheme */
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+/* Label Styling */
+.ingredient-row strong {
+    color: #005f73; /* Darker text color */
+}
+
+/* Value Styling */
+.ingredient-row {
+    color: #000; /* Black or dark text */
+}
+
+/* Add a hover effect */
+.ingredient-row:hover {
+    background-color: #c7ecee; /* Slightly lighter color on hover */
+}

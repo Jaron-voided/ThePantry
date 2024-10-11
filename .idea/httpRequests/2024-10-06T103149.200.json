@@ -1,0 +1,96 @@
+[
+  {
+    "id": "d0247b76-e9ac-4885-994d-148ebc9deb2f",
+    "name": "Simple Pancakes",
+    "recipeCategory": 2,
+    "instructions": [
+      "Mix flour, milk, eggs, and sugar.",
+      "Cook on skillet until golden."
+    ],
+    "servingsPerRecipe": 2
+  },
+  {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "sandwich",
+    "recipeCategory": 0,
+    "instructions": [
+      "string"
+    ],
+    "servingsPerRecipe": 10
+  },
+  {
+    "id": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+    "name": "Grilled Chicken Salad",
+    "recipeCategory": 3,
+    "instructions": [
+      "Grill chicken.",
+      "Chop lettuce, carrots, and apples.",
+      "Mix with balsamic vinegar."
+    ],
+    "servingsPerRecipe": 2
+  },
+  {
+    "id": "6274870b-6d05-47c1-a3b5-5fc8bdb3108d",
+    "name": "Roasted Vegetables",
+    "recipeCategory": 4,
+    "instructions": [
+      "Chop potatoes, carrots, and peppers.",
+      "Drizzle with olive oil.",
+      "Roast until tender."
+    ],
+    "servingsPerRecipe": 2
+  },
+  {
+    "id": "3045fd5c-27ad-4547-9c48-735397d35148",
+    "name": "Apple Pie",
+    "recipeCategory": 5,
+    "instructions": [
+      "Make dough.",
+      "Slice apples and mix with cinnamon and sugar.",
+      "Bake in oven."
+    ],
+    "servingsPerRecipe": 6
+  },
+  {
+    "id": "646e12ad-34d7-483a-8fd6-be60f9d8b689",
+    "name": "Beef Stir Fry",
+    "recipeCategory": 4,
+    "instructions": [
+      "Slice beef.",
+      "Stir-fry with carrots, broccoli, and soy sauce.",
+      "Serve over rice."
+    ],
+    "servingsPerRecipe": 3
+  },
+  {
+    "id": "35a5cba5-3fe2-46d5-8c10-c3e60a36193b",
+    "name": "Banana Smoothie",
+    "recipeCategory": 2,
+    "instructions": [
+      "Blend bananas, milk, and a pinch of cinnamon until smooth."
+    ],
+    "servingsPerRecipe": 1
+  },
+  {
+    "id": "91ee6e21-9952-4b47-83ea-d436ef0571a1",
+    "name": "Cheese Omelette",
+    "recipeCategory": 2,
+    "instructions": [
+      "Whisk eggs.",
+      "Add cheddar cheese.",
+      "Cook on skillet until firm."
+    ],
+    "servingsPerRecipe": 1
+  },
+  {
+    "id": "1940c32d-d1d7-4a2b-9591-f3dcb7b4ed14",
+    "name": "Spaghetti Bolognese",
+    "recipeCategory": 4,
+    "instructions": [
+      "Cook pasta.",
+      "Brown ground turkey, add tomatoes and spices.",
+      "Mix with pasta."
+    ],
+    "servingsPerRecipe": 4
+  }
+]

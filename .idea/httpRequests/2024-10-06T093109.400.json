@@ -1,0 +1,11 @@
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "errors": {
+    "$.instructions": [
+      "The JSON value could not be converted to System.Collections.Generic.List`1[System.String]. Path: $.instructions | LineNumber: 3 | BytePositionInLine: 96."
+    ]
+  },
+  "traceId": "00-fc3e41b08553063275ec90816d5d9c78-e4641a9346f13626-00"
+}

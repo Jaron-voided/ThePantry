@@ -1,0 +1,161 @@
+### Adding measurements for each recipe ###
+
+# Grilled Chicken Salad
+# Add Chicken Breast (1 piece)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+  "recipeId": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+  "ingredientId": "329d4371-8df3-4e9f-9494-2bb66b155bff",
+  "amount": 1
+}
+
+###
+# Add Lettuce (1 leaf)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+"ingredientId": "dbe3218e-f1e8-461c-bea3-ecd5b82febc4",
+"amount": 1
+}
+
+###
+# Add Olive Oil (1 tbsp)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "836cc814-1c88-4ada-a1ed-57d00c0cc4b0",
+"ingredientId": "d96fd73d-7fdb-4519-864d-90b68e9b965e",
+"amount": 1
+}
+
+###
+# Roasted Vegetables
+# Add Carrots (1 piece)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "6274870b-6d05-47c1-a3b5-5fc8bdb3108d",
+"ingredientId": "09e06d35-91e8-4159-9356-998f08c601b6",
+"amount": 1
+}
+
+###
+# Add Potatoes (1 piece)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "6274870b-6d05-47c1-a3b5-5fc8bdb3108d",
+"ingredientId": "30087bb2-6914-4ff7-a696-9ce1513ed810",
+"amount": 1
+}
+
+###
+# Apple Pie
+# Add Apples (3 pieces)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "3045fd5c-27ad-4547-9c48-735397d35148",
+"ingredientId": "f0b9cb15-f02c-4929-9753-6c95a0ddb37f",
+"amount": 3
+}
+
+###
+# Add Cinnamon (1 tsp)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "3045fd5c-27ad-4547-9c48-735397d35148",
+"ingredientId": "d228d236-9bba-4c85-ab9b-1bbff80d98c5",
+"amount": 1
+}
+
+###
+# Banana Smoothie
+# Add Bananas (2 pieces)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "35a5cba5-3fe2-46d5-8c10-c3e60a36193b",
+"ingredientId": "6b819d84-5a18-4306-9c3b-ff7c6bef9dc4",
+"amount": 2
+}
+
+###
+# Add Milk (1 cup)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "35a5cba5-3fe2-46d5-8c10-c3e60a36193b",
+"ingredientId": "f1e20654-ca04-4b1e-aff3-0b9721acf4e0",
+"amount": 1
+}
+
+###
+# Beef Stir Fry
+# Add Beef Steak (1 piece)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "646e12ad-34d7-483a-8fd6-be60f9d8b689",
+"ingredientId": "dba10117-e25f-48be-9cdf-798feb8a8891",
+"amount": 1
+}
+
+###
+# Add Carrots (1 piece)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "646e12ad-34d7-483a-8fd6-be60f9d8b689",
+"ingredientId": "09e06d35-91e8-4159-9356-998f08c601b6",
+"amount": 1
+}
+
+###
+# Cheese Omelette
+# Add Cheddar Cheese (2 slices)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "91ee6e21-9952-4b47-83ea-d436ef0571a1",
+"ingredientId": "63e264d0-d9ce-42f7-a3c2-14e0f4f8a7a1",
+"amount": 2
+}
+
+###
+# Spaghetti Bolognese
+# Add Ground Turkey (1 lb)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "1940c32d-d1d7-4a2b-9591-f3dcb7b4ed14",
+"ingredientId": "34eadbbc-6e23-4254-8591-eff006a025db",
+"amount": 1
+}
+
+###
+# Add Pasta (200 grams)
+POST https://localhost:5001/api/measurements
+Content-Type: application/json
+
+{
+"recipeId": "1940c32d-d1d7-4a2b-9591-f3dcb7b4ed14",
+"ingredientId": "ac06c797-0d31-4c51-a9cc-e32b63e0ef1a",
+"amount": 200
+}

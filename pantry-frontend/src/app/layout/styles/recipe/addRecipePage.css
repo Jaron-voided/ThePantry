@@ -1,0 +1,107 @@
+/* Add recipe container with flexbox and similar styling to the ingredient form */
+.add-recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centering the form */
+    padding: 20px;
+    background-color: #FA8072; /* Salmon background */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Box shadow similar to ingredient */
+}
+
+/* Form title */
+.add-recipe-container h1 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.add-recipe-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Form field containers */
+.add-recipe-form div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form labels */
+.add-recipe-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input, textarea, and select styling */
+.add-recipe-form input[type="text"],
+.add-recipe-form input[type="number"],
+.add-recipe-form textarea,
+.add-recipe-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+/* Textarea specific styling */
+.add-recipe-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Focus state for inputs */
+.add-recipe-form input:focus,
+.add-recipe-form textarea:focus,
+.add-recipe-form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styles */
+.add-recipe-form button {
+    background-color: #007bff; /* Blue background for submit button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+}
+
+/* Button hover state */
+.add-recipe-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Additional spacing for form elements */
+.add-recipe-form input,
+.add-recipe-form textarea,
+.add-recipe-form select {
+    margin-top: 5px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .add-recipe-container {
+        padding: 15px;
+    }
+
+    .add-recipe-form h1 {
+        font-size: 20px;
+    }
+}

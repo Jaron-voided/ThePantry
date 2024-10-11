@@ -1,0 +1,191 @@
+[
+  {
+    "id": "f1e20654-ca04-4b1e-aff3-0b9721acf4e0",
+    "name": "Milk",
+    "measuredIn": 1,
+    "ingredientCategory": 4,
+    "pricePerPackage": 2.50,
+    "measurementsPerPackage": 1,
+    "pricePerMeasurement": 2.50
+  },
+  {
+    "id": "63e264d0-d9ce-42f7-a3c2-14e0f4f8a7a1",
+    "name": "Cheddar Cheese",
+    "measuredIn": 0,
+    "ingredientCategory": 4,
+    "pricePerPackage": 4.50,
+    "measurementsPerPackage": 1,
+    "pricePerMeasurement": 4.50
+  },
+  {
+    "id": "d228d236-9bba-4c85-ab9b-1bbff80d98c5",
+    "name": "Cinnamon",
+    "measuredIn": 0,
+    "ingredientCategory": 0,
+    "pricePerPackage": 1.50,
+    "measurementsPerPackage": 100,
+    "pricePerMeasurement": 0.015
+  },
+  {
+    "id": "329d4371-8df3-4e9f-9494-2bb66b155bff",
+    "name": "Chicken Breast",
+    "measuredIn": 0,
+    "ingredientCategory": 1,
+    "pricePerPackage": 8.00,
+    "measurementsPerPackage": 4,
+    "pricePerMeasurement": 2.00
+  },
+  {
+    "id": "f2e424cd-c8d0-4b4c-aa9b-3082235cb934",
+    "name": "Sugar",
+    "measuredIn": 0,
+    "ingredientCategory": 7,
+    "pricePerPackage": 2.00,
+    "measurementsPerPackage": 10,
+    "pricePerMeasurement": 0.20
+  },
+  {
+    "id": "14eaab8f-477b-4149-90bc-5ba8405ea859",
+    "name": "Pepper",
+    "measuredIn": 0,
+    "ingredientCategory": 0,
+    "pricePerPackage": 1.20,
+    "measurementsPerPackage": 500,
+    "pricePerMeasurement": 0.0024
+  },
+  {
+    "id": "f0b9cb15-f02c-4929-9753-6c95a0ddb37f",
+    "name": "Apples",
+    "measuredIn": 0,
+    "ingredientCategory": 3,
+    "pricePerPackage": 3.00,
+    "measurementsPerPackage": 6,
+    "pricePerMeasurement": 0.50
+  },
+  {
+    "id": "dba10117-e25f-48be-9cdf-798feb8a8891",
+    "name": "Beef Steak",
+    "measuredIn": 0,
+    "ingredientCategory": 1,
+    "pricePerPackage": 12.00,
+    "measurementsPerPackage": 2,
+    "pricePerMeasurement": 6.00
+  },
+  {
+    "id": "6eb9d88e-d9a1-46a6-93ca-8ff892beec5d",
+    "name": "Strawberries",
+    "measuredIn": 0,
+    "ingredientCategory": 3,
+    "pricePerPackage": 3.50,
+    "measurementsPerPackage": 20,
+    "pricePerMeasurement": 0.175
+  },
+  {
+    "id": "d96fd73d-7fdb-4519-864d-90b68e9b965e",
+    "name": "Olive Oil",
+    "measuredIn": 1,
+    "ingredientCategory": 6,
+    "pricePerPackage": 10.00,
+    "measurementsPerPackage": 2,
+    "pricePerMeasurement": 5.00
+  },
+  {
+    "id": "09e06d35-91e8-4159-9356-998f08c601b6",
+    "name": "Carrots",
+    "measuredIn": 0,
+    "ingredientCategory": 2,
+    "pricePerPackage": 2.00,
+    "measurementsPerPackage": 10,
+    "pricePerMeasurement": 0.20
+  },
+  {
+    "id": "30087bb2-6914-4ff7-a696-9ce1513ed810",
+    "name": "Potatoes",
+    "measuredIn": 0,
+    "ingredientCategory": 2,
+    "pricePerPackage": 3.00,
+    "measurementsPerPackage": 5,
+    "pricePerMeasurement": 0.60
+  },
+  {
+    "id": "2fe94c14-919f-4289-8226-a37c029b5acc",
+    "name": "Salt",
+    "measuredIn": 0,
+    "ingredientCategory": 0,
+    "pricePerPackage": 1.50,
+    "measurementsPerPackage": 1000,
+    "pricePerMeasurement": 0.0015
+  },
+  {
+    "id": "5d36fd98-950e-48bb-8c17-ac67e93bb953",
+    "name": "Flour",
+    "measuredIn": 0,
+    "ingredientCategory": 7,
+    "pricePerPackage": 2.50,
+    "measurementsPerPackage": 4,
+    "pricePerMeasurement": 0.625
+  },
+  {
+    "id": "2de3c946-ab68-4d5b-b881-b8cf1b1aefac",
+    "name": "Salt",
+    "measuredIn": 0,
+    "ingredientCategory": 0,
+    "pricePerPackage": 1.50,
+    "measurementsPerPackage": 1000,
+    "pricePerMeasurement": 0.0015
+  },
+  {
+    "id": "0e30a90b-426c-4ee1-9c21-d26417403e37",
+    "name": "Rice",
+    "measuredIn": 0,
+    "ingredientCategory": 5,
+    "pricePerPackage": 4.00,
+    "measurementsPerPackage": 20,
+    "pricePerMeasurement": 0.20
+  },
+  {
+    "id": "9c9b663b-2a7a-4435-af27-d82ec68c0d34",
+    "name": "Balsamic Vinegar",
+    "measuredIn": 1,
+    "ingredientCategory": 6,
+    "pricePerPackage": 7.00,
+    "measurementsPerPackage": 1,
+    "pricePerMeasurement": 7.00
+  },
+  {
+    "id": "ac06c797-0d31-4c51-a9cc-e32b63e0ef1a",
+    "name": "Pasta",
+    "measuredIn": 0,
+    "ingredientCategory": 5,
+    "pricePerPackage": 3.00,
+    "measurementsPerPackage": 8,
+    "pricePerMeasurement": 0.375
+  },
+  {
+    "id": "dbe3218e-f1e8-461c-bea3-ecd5b82febc4",
+    "name": "Lettuce",
+    "measuredIn": 0,
+    "ingredientCategory": 2,
+    "pricePerPackage": 1.20,
+    "measurementsPerPackage": 1,
+    "pricePerMeasurement": 1.20
+  },
+  {
+    "id": "34eadbbc-6e23-4254-8591-eff006a025db",
+    "name": "Ground Turkey",
+    "measuredIn": 0,
+    "ingredientCategory": 1,
+    "pricePerPackage": 5.00,
+    "measurementsPerPackage": 4,
+    "pricePerMeasurement": 1.25
+  },
+  {
+    "id": "6b819d84-5a18-4306-9c3b-ff7c6bef9dc4",
+    "name": "Bananas",
+    "measuredIn": 0,
+    "ingredientCategory": 3,
+    "pricePerPackage": 1.80,
+    "measurementsPerPackage": 6,
+    "pricePerMeasurement": 0.30
+  }
+]

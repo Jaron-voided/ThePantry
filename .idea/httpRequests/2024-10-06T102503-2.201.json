@@ -1,0 +1,11 @@
+{
+  "id": "1940c32d-d1d7-4a2b-9591-f3dcb7b4ed14",
+  "name": "Spaghetti Bolognese",
+  "recipeCategory": 4,
+  "instructions": [
+    "Cook pasta.",
+    "Brown ground turkey, add tomatoes and spices.",
+    "Mix with pasta."
+  ],
+  "servingsPerRecipe": 4
+}

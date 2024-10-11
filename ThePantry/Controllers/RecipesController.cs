@@ -9,6 +9,8 @@ namespace ThePantry.Controllers;
 [Route("api/[controller]")]
 public class RecipesController(IRecipeService recipeService) : ControllerBase
 {
+  
+        
     // Get: api/Recipes
     [HttpGet]
     public IActionResult GetAllRecipes()
@@ -37,11 +39,19 @@ public class RecipesController(IRecipeService recipeService) : ControllerBase
         {
             return BadRequest(ModelState); // 400 if model validation fails
         }
-        
-        var recipe = recipeService.MapToRecipe(recipeDto);
-        recipeService.AddRecipe(recipe);
-        
-        return CreatedAtAction(nameof(GetRecipeById), new { id = recipe.Id }, recipe);
+
+        try
+        {
+            var recipe = recipeService.MapToRecipe(recipeDto);
+            recipeService.AddRecipe(recipe);
+            return CreatedAtAction(nameof(GetRecipeById), new { id = recipe.Id }, recipe);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error occurred while adding recipe: {ex.Message}");
+            return StatusCode(500, "Internal server error");
+        }
+
     }
     
     // PUT: api/Recipes/{id}
@@ -81,4 +91,36 @@ public class RecipesController(IRecipeService recipeService) : ControllerBase
         recipeService.DeleteRecipe(recipeToDelete);
         return NoContent(); // 204 No Content after successful deletion
     }
+
+    [HttpGet("totalPrice/{id}")]
+    public ActionResult<decimal> GetTotalPriceForRecipe(Guid id)
+    {
+        RecipeDTO recipe = recipeService.GetById(id);
+
+        if (recipe == null)
+        {
+            return NotFound();
+        }
+
+        var recipeToQuery = recipeService.MapToRecipe(recipe);
+        var totalPrice = recipeService.CalculateTotalPriceForRecipe(recipeToQuery);
+        return Ok(totalPrice); // This still can box but return type is explicit
+    }
+
+    [HttpGet("pricePerServing/{id}")]
+    public ActionResult<decimal> GetPricePerServing(Guid id)
+    {
+        var recipe = recipeService.GetById(id);
+
+        if (recipe == null)
+        {
+            return NotFound();
+        }
+
+        var recipeToQuery = recipeService.MapToRecipe(recipe);
+        var pricePerServing = recipeService.CalculatePricePerServing(recipeToQuery);
+        return Ok(pricePerServing); // This still can box but return type is explicit
+    }
+
+
 }
