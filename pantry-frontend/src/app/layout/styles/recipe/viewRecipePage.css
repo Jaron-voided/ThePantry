@@ -8,7 +8,7 @@
     background-color: #f2f2f2; /* Light gray background */
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial, sans-serif';
+    font-family: 'Arial, sans-serif', monospace;
 }
 
 /* Header styling */
@@ -48,4 +48,81 @@
 /* Add a hover effect */
 .recipe-row:hover {
     background-color: #c7ecee; /* Slightly lighter color on hover */
+}
+
+/* Container for the entire recipe view */
+.recipe-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Header for the recipe view */
+.recipe-header {
+    font-size: 2.2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Recipe details section */
+.recipe-details {
+    margin-top: 20px;
+}
+
+/* Common row styling for recipe details */
+.recipe-row {
+    font-size: 1.1em;
+    margin: 10px 0;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+/* Strong tag to make certain parts bold */
+.recipe-row strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ingredients and Measurements */
+.recipe-measurements {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+/* Individual measurement item */
+.recipe-measurements li {
+    font-size: 1em;
+    margin: 8px 0;
+    color: #666;
+}
+
+/* Styling for the measurements section header */
+h2.recipe-row {
+    font-size: 1.5em;
+    margin-top: 30px;
+    color: #444;
+    text-align: left;
+}
+
+/* Loading text when recipe is not available yet */
+.recipe-container div {
+    font-size: 1.2em;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+/* For error states */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
 }

@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { getRecipeCategoryLabel } from "../../utils/enumHelpers.js";
+import '../../app/layout/styles/recipe/viewRecipe.css';
+
 
 const ViewRecipe = () => {
     const { id } = useParams();
@@ -19,9 +21,7 @@ const ViewRecipe = () => {
                 }
                 throw new Error('Failed to fetch recipe');
             })
-            .then((data) => {
-                setRecipe(data);
-            })
+            .then((data) => setRecipe(data))
             .catch((error) => console.error('Error adding recipe:', error));
         },  [id]);
 
@@ -67,7 +67,15 @@ const ViewRecipe = () => {
                     }
                     throw new Error('Failed to fetch measurements');
                 })
-                .then((data) => setMeasurements(data))
+                .then((data) => {
+                    setMeasurements(data)
+
+                    // Extract unique ingredientIds from the measurements
+                    const ingredientIds = [...new Set(data.map(m => m.ingredientId))];
+
+                    // Fetch ingredient names based on their IDs
+                    fetchIngredients(ingredientIds);
+                })
                 .catch((error) => console.error('Error fetching measurement:', error));
         }
     }, [recipe]);

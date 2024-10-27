@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using ThePantry.Models.DTOs;
 using ThePantry.Services.Measurement;
 using ThePantry.Models.Measurement;
-using ThePantry.Services.Measurement;
+//using ThePantry.Services.Measurement;
 
 namespace ThePantry.Controllers;
 
@@ -82,4 +82,23 @@ public class MeasurementsController(IMeasurementService measurementService) : Co
         measurementService.DeleteMeasurement(measurementToDelete);
         return NoContent(); // 204 No Content after successful deletion
     }
+
+        // Delete: api/Measurements/byRecipe/{recipeId}
+        [HttpDelete("byRecipe/{recipeId}")]
+        public IActionResult DeleteMeasurementsByRecipe(Guid recipeId)
+        {
+            var measurements = measurementService.GetMeasurementsByRecipe(recipeId);
+            if (measurements == null || measurements.Count() == 0)
+            {
+                return NotFound();
+            }
+
+            foreach (var measurementDTO in measurements)
+            {
+                var measurementToDelete = measurementService.MapToMeasurement(measurementDTO);
+                measurementService.DeleteMeasurement(measurementToDelete);
+            }
+
+            return NoContent(); // 204 No Content after successful deletion
+        }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from "../../app/layout/layout.jsx";
+import EditRecipe from "../../components/Recipes/EditRecipe.jsx";
 
 const EditRecipePage = () => (
     <Layout>

@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from "../../app/layout/layout.jsx";
 import EditIngredientForm from "../../components/Ingredients/EditIngredientForm.jsx";
-import { useNavigate } from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
 const EditIngredient = () => {
     const navigate = useNavigate();
+    const { id } = useParams();
 
     // Function to handle form submission
     const handleEditIngredient = (ingredientData) => {
@@ -22,7 +23,7 @@ const EditIngredient = () => {
 
 
         // POST to your backend API to edit the ingredient
-        fetch('https://localhost:5001/api/ingredients', {
+        fetch(`https://localhost:5001/api/ingredients/${id}`, {
             //fetch('http://localhost:5000/api/ingredients', {
             method: 'PUT',
             headers: {
@@ -32,7 +33,7 @@ const EditIngredient = () => {
         })
             .then((response) => {
                 if (response.ok) {
-                    return response.json();
+                    return response.text().then(text => text ? JSON.parse(text) : null);
                 }
                 // Log the response text for debugging
                 return response.text().then(text => {

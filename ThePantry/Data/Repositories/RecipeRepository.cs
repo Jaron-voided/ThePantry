@@ -2,12 +2,14 @@ using Microsoft.Data.SqlClient;
 using ThePantry.Models.Extras;
 using ThePantry.Models.Ingredient;
 using ThePantry.Models.Recipe;
+using ThePantry.Services.Recipe;
 
 namespace ThePantry.Data.Repositories;
 
-public class RecipeRepository(SqlConnection connection) : IRecipeRepository
+public class RecipeRepository(SqlConnection connection, IMeasurementRepository measurementRepository) : IRecipeRepository
 {
     private readonly SqlConnection _connection = connection;
+    private readonly IMeasurementRepository _measurementRepository = measurementRepository;
 
     public void Add(IRecipe recipe)
     {
@@ -136,4 +138,55 @@ public class RecipeRepository(SqlConnection connection) : IRecipeRepository
 
         return recipes;
     }
+
+    public IEnumerable<IRecipe> GetByCategory(Categories.RecipeCategory category)
+    {
+        const string selectCommandText = @"SELECT * FROM Recipe WHERE RecipeCategory = @category;";
+
+        SqlParameter[] parameters =
+        {
+            new SqlParameter("@category", category)
+        };
+
+        var recipes = new List<IRecipe>();
+
+        using var reader = DB.ExecuteReader(selectCommandText, parameters);
+        while (reader.Read())
+        {
+            var recipe = new Recipe
+            {
+                Id = reader.GetGuid(reader.GetOrdinal("Id")),
+                Name = reader.GetString(reader.GetOrdinal("Name")),
+                RecipeCategory = (Categories.RecipeCategory)reader.GetInt32(reader.GetOrdinal("RecipeCategory")),
+                Instructions = reader.GetString(reader.GetOrdinal("Instructions")).Split(';', StringSplitOptions.RemoveEmptyEntries).ToList(),
+                ServingsPerRecipe = reader.GetInt32(reader.GetOrdinal("ServingsPerRecipe"))
+            };
+            
+            recipes.Add(recipe);
+        }
+
+        return recipes;
+    }
+
+    /*public IEnumerable<IRecipe> GetByIngredient(Guid ingredientId)
+    {
+        var measurements = _measurementRepository.GetMeasurementsWithIngredient(ingredientId);
+        var recipes = new List<IRecipe>();
+        foreach (var measurement in measurements)
+        {
+            var recipe = GetById(measurement.RecipeId);
+            if (!recipes.Contains(recipe))
+            {
+                recipes.Add(recipe);
+            }
+        }
+
+        return recipes;
+    }
+
+    public IEnumerable<IRecipe> SortByPrice()
+    {
+        var recipes = GetAll();
+        return recipes.OrderBy(recipe => _recipeService.CalculateTotalPriceForRecipe(recipe));
+    }*/
 }

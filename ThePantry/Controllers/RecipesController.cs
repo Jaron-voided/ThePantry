@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ThePantry.Models.DTOs;
+using ThePantry.Models.Extras;
 using ThePantry.Services.Recipe;
 using ThePantry.Models.Recipe;
 
@@ -17,6 +18,42 @@ public class RecipesController(IRecipeService recipeService) : ControllerBase
     {
         var recipes = recipeService.GetAllRecipes();
         return Ok(recipes);
+    }
+    
+    // Get api/Recipes/byCategory/{category}
+    [HttpGet("byCategory/{category}")]
+    public IActionResult GetRecipesByCategory(Categories.RecipeCategory category)
+    {
+        var recipes = recipeService.GetByCategory(category);
+        if (recipes == null)
+        {
+            return NotFound();
+        }
+        return Ok(recipes);
+    }
+    
+    // Get api/Recipes/byIngredient/{ingredientId}
+    [HttpGet("byIngredient/{ingredientId}")]
+    public IActionResult GetRecipesByIngredient(Guid ingredientId)
+    {
+        var recipes = recipeService.GetByIngredient(ingredientId);
+        if (recipes == null)
+        {
+            return NotFound();
+        }
+        return Ok(recipes);
+    }
+    
+    // Get api/Recipes/sortedByPrice
+    [HttpGet("sortedByPrice")]
+    public IActionResult GetRecipesByPrice()
+    {
+        var recipe = recipeService.SortByPrice();
+        if (recipe == null)
+        {
+            return NotFound();
+        }
+        return Ok(recipe);
     }
     
     // Get api/Recipes/{id}

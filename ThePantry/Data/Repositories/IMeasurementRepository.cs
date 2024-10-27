@@ -9,4 +9,5 @@ public interface IMeasurementRepository
     void Delete(IMeasurement measurement);
     Measurement GetById(Guid id);
     IEnumerable<Measurement> GetMeasurementsByRecipe(Guid recipeId);
+    IEnumerable<Measurement> GetMeasurementsWithIngredient(Guid ingredientId);
 }

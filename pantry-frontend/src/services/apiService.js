@@ -27,9 +27,58 @@ export const getIngredients = () => {
 
 // Function to fetch recipes
 export const getRecipes = () => {
-    console.log('Requesting from:', `${api.defaults.baseURL}/recipes`);
+    const url = '/recipes';
+    console.log('Requesting from:', `${api.defaults.baseURL}${url}`);
 
-    return api.get('/recipes')
+    return api.get(url)
+        .then((response) => {
+            console.log('Response:', response.data);
+            return response.data;
+        })
+        .catch(error => {
+            console.log('Error fetching recipes:' ,error);
+            throw error;
+        });
+};
+
+// Function to fetch recipes by category
+export const getRecipesByCategory = (category) => {
+    const url = `/recipes/byCategory/${category}`;
+    console.log('Requesting from:', `${api.defaults.baseURL}${url}`);
+
+    return api.get(url)
+        .then((response) => {
+            console.log('Response:', response.data);
+            return response.data;
+        })
+        .catch(error => {
+            console.log('Error fetching recipes:' ,error);
+            throw error;
+        });
+};
+
+// Function to fetch recipes by ingredient
+export const getRecipesByIngredient = (ingredientId) => {
+    const url = `/recipes/byIngredient/${ingredientId}`;
+    console.log('Requesting from:', `${api.defaults.baseURL}${url}`);
+
+    return api.get(url)
+        .then((response) => {
+            console.log('Response:', response.data);
+            return response.data;
+        })
+        .catch(error => {
+            console.log('Error fetching recipes:' ,error);
+            throw error;
+        });
+};
+
+// Function to fetch recipes by category
+export const getRecipesByPrice = () => {
+    const url = '/recipes/sortedByPrice';
+    console.log('Requesting from:', `${api.defaults.baseURL}${url}`);
+
+    return api.get(url)
         .then((response) => {
             console.log('Response:', response.data);
             return response.data;

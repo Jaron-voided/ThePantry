@@ -39,16 +39,16 @@ const AddMeasurementsForm = ({ onSubmit, recipeId, finish }) => {
     // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData, finish);
+        // onSubmit(formData, finish);
+        onSubmit(formData, false);
 
-        if (!finish) {
-            // Reset the form only if we're adding another measurement
-            setFormData({
-                recipeId: recipeId,
-                ingredientId: '',
-                amount: 0
-            });
-        }
+
+        // Reset the form only if we're adding another measurement
+        setFormData({
+            recipeId: recipeId,
+            ingredientId: '',
+            amount: 0
+        });
     };
 
     return (
@@ -91,7 +91,7 @@ const AddMeasurementsForm = ({ onSubmit, recipeId, finish }) => {
 AddMeasurementsForm.propTypes = {
     onSubmit: PropTypes.func.isRequired,
     recipeId: PropTypes.string.isRequired,
-    finish: PropTypes.bool.isRequired
+    finish: PropTypes.bool
 };
 
 export default AddMeasurementsForm;

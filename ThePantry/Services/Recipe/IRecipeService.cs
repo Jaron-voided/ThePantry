@@ -1,4 +1,5 @@
 using ThePantry.Models.DTOs;
+using ThePantry.Models.Extras;
 using ThePantry.Models.Measurement;
 using ThePantry.Models.Recipe;
 
@@ -25,4 +26,8 @@ public interface IRecipeService
     void AddRecipe(IRecipe recipe);
     void UpdateRecipe(IRecipe updatedRecipe);
     void DeleteRecipe(IRecipe recipeToDelete);
+    
+    IEnumerable<IRecipe> GetByCategory(Categories.RecipeCategory category);
+    IEnumerable<IRecipe> GetByIngredient(Guid ingredientId);
+    IEnumerable<IRecipe> SortByPrice();
 }

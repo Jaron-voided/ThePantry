@@ -1,6 +1,7 @@
 using System.Text.Json;
 using ThePantry.Data.Repositories;
 using ThePantry.Models.DTOs;
+using ThePantry.Models.Extras;
 using ThePantry.Models.Measurement;
 using ThePantry.Models.Recipe;
 using ThePantry.Services.Measurement;
@@ -94,4 +95,35 @@ public class RecipeService(
     {
         recipeRepository.Delete(recipeToDelete);
     }
+
+    public IEnumerable<IRecipe> GetByCategory(Categories.RecipeCategory category)
+    {
+        return recipeRepository.GetByCategory(category);
+    }
+
+    public IEnumerable<IRecipe> GetByIngredient(Guid ingredientId)
+    {
+        var measurements = measurementRepository.GetMeasurementsWithIngredient(ingredientId);
+        var recipes = new List<IRecipe>();
+        foreach (var measurement in measurements)
+        {
+            var recipe = GetById(measurement.RecipeId);
+            var newRecipe = MapToRecipe(recipe);
+            if (!recipes.Contains(newRecipe))
+            {
+                recipes.Add(newRecipe);
+            }
+        }
+
+        return recipes;
+    }
+
+    public IEnumerable<IRecipe> SortByPrice()
+    {
+        var recipes = recipeRepository.GetAll();
+        return recipes.OrderBy(recipe => CalculateTotalPriceForRecipe(recipe));
+    }
+    
+    
+    
 }

@@ -10,6 +10,7 @@ import AddRecipePage from "../../pages/Recipes/AddRecipePage.jsx";
 import ViewRecipePage from "../../pages/Recipes/ViewRecipePage.jsx";
 import EditRecipePage from "../../pages/Recipes/EditRecipePage.jsx";
 import AddMeasurementsPage from "../../pages/Measurements/AddMeasurementsPage.jsx";
+import EditMeasurementsPage from "../../pages/Measurements/EditMeasurementsPage.jsx";
 
 
 const App = () => (
@@ -25,7 +26,7 @@ const App = () => (
             <Route path="/recipes/view/:id" element={<ViewRecipePage />} />
             <Route path="/recipes/edit/:id" element={<EditRecipePage />} />
             <Route path="/recipes/measurements/:recipeId" element={<AddMeasurementsPage />} />
-
+            <Route path="/recipes/measurements/edit/:recipeId" element={<EditMeasurementsPage />} />
         </Routes>
     </Router>
 );

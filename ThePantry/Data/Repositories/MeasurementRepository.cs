@@ -96,4 +96,31 @@ public class MeasurementRepository(SqlConnection connection) : IMeasurementRepos
         }
         return measurements;
     }
+
+    public IEnumerable<Measurement> GetMeasurementsWithIngredient(Guid ingredientId)
+    {
+        const string selectCommandText = @"SELECT * FROM Measurement WHERE IngredientId = @ingredientId;";
+
+        SqlParameter[] parameters =
+        {
+            new SqlParameter("@ingredientId", ingredientId)
+        };
+
+        var measurements = new List<Measurement>();
+
+        using var reader = DB.ExecuteReader(selectCommandText, parameters);
+        while (reader.Read())
+        {
+            var measurement = new Measurement
+            {
+                Id = reader.GetGuid(reader.GetOrdinal("Id")),
+                RecipeId = reader.GetGuid(reader.GetOrdinal("RecipeId")),
+                IngredientId = reader.GetGuid(reader.GetOrdinal("IngredientId")),
+                Amount = reader.GetDecimal(reader.GetOrdinal("Amount"))
+            };
+
+            measurements.Add(measurement);
+        }
+        return measurements;
+    }
 }
