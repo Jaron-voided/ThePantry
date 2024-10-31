@@ -4,9 +4,16 @@ using ThePantry.Models.Ingredient;
 
 namespace ThePantry.Data.Repositories;
 
-public class IngredientRepository(SqlConnection connection) : IIngredientRepository
+//public class IngredientRepository(SqlConnection connection) : IIngredientRepository
+public class IngredientRepository : IIngredientRepository
 {
-    private readonly SqlConnection _connection = connection;
+    //private readonly SqlConnection _connection = connection;
+    private readonly DB _db;
+
+    public IngredientRepository(DB db)
+    {
+        _db = db;
+    }
     public void Add(IIngredient ingredient)
     {
         ingredient.Id = Guid.NewGuid();
@@ -23,7 +30,8 @@ public class IngredientRepository(SqlConnection connection) : IIngredientReposit
             new SqlParameter("@measurementsPerPackage", ingredient.MeasurementsPerPackage)
         };
 
-        DB.ExecuteNonQuery(insertCommandText, parameters);
+        //DB.ExecuteNonQuery(insertCommandText, parameters);
+        _db.ExecuteNonQuery(insertCommandText, parameters);
     }
     public void Update(IIngredient ingredient)
     {
@@ -42,7 +50,8 @@ public class IngredientRepository(SqlConnection connection) : IIngredientReposit
             new SqlParameter("@measurementsPerPackage", ingredient.MeasurementsPerPackage)
         };
 
-        DB.ExecuteNonQuery(updateCommandText, parameters);
+        //DB.ExecuteNonQuery(updateCommandText, parameters);
+        _db.ExecuteNonQuery(updateCommandText, parameters);
     }
     public void Delete(IIngredient ingredient)
     {
@@ -53,7 +62,7 @@ public class IngredientRepository(SqlConnection connection) : IIngredientReposit
             new SqlParameter("@id", ingredient.Id)
         };
 
-        DB.ExecuteNonQuery(deleteCommandText, parameters);
+        _db.ExecuteNonQuery(deleteCommandText, parameters);
     }
     public IIngredient GetById(Guid id)
     {
@@ -61,7 +70,7 @@ public class IngredientRepository(SqlConnection connection) : IIngredientReposit
         
         SqlParameter[] parameters = { new SqlParameter("@id", id) };
         
-        using var reader = DB.ExecuteReader(selectCommandText, parameters);
+        using var reader = _db.ExecuteReader(selectCommandText, parameters);
 
         if (reader.Read())
         {
@@ -88,7 +97,7 @@ public class IngredientRepository(SqlConnection connection) : IIngredientReposit
 
         var ingredients = new List<IIngredient>();
 
-        using var reader = DB.ExecuteReader(selectCommandText, Array.Empty<SqlParameter>());
+        using var reader = _db.ExecuteReader(selectCommandText, Array.Empty<SqlParameter>());
         while (reader.Read())
         {
             var id = reader.GetGuid(reader.GetOrdinal("Id"));

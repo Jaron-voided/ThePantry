@@ -1,16 +1,25 @@
 using Microsoft.Data.SqlClient;
 using ThePantry.Models.Extras;
-using ThePantry.Models.Ingredient;
+//using ThePantry.Models.Ingredient;
 using ThePantry.Models.Recipe;
 using ThePantry.Services.Recipe;
 
 namespace ThePantry.Data.Repositories;
 
-public class RecipeRepository(SqlConnection connection, IMeasurementRepository measurementRepository) : IRecipeRepository
+//public class RecipeRepository(SqlConnection connection, IMeasurementRepository measurementRepository) : IRecipeRepository
+public class RecipeRepository : IRecipeRepository
 {
-    private readonly SqlConnection _connection = connection;
-    private readonly IMeasurementRepository _measurementRepository = measurementRepository;
+    /*private readonly SqlConnection _connection = connection;
+    private readonly IMeasurementRepository _measurementRepository = measurementRepository;*/
 
+    private readonly DB _db;
+    private readonly IMeasurementRepository _measurementRepository;
+
+    public RecipeRepository(DB db, IMeasurementRepository measurementRepository)
+    {
+        _db = db;
+        _measurementRepository = measurementRepository;
+    }
     public void Add(IRecipe recipe)
     {
         recipe.Id = Guid.NewGuid();
@@ -50,7 +59,7 @@ public class RecipeRepository(SqlConnection connection, IMeasurementRepository m
         // Execute the insert command
         try
         {
-            DB.ExecuteNonQuery(insertCommandText, parameters);
+            _db.ExecuteNonQuery(insertCommandText, parameters);
             Console.WriteLine("Recipe added successfully.");
         }
         catch (Exception ex)
@@ -76,7 +85,7 @@ public class RecipeRepository(SqlConnection connection, IMeasurementRepository m
             new SqlParameter("@servingsPerRecipe", recipe.ServingsPerRecipe)
         };
 
-        DB.ExecuteNonQuery(updateCommandText, parameters);
+        _db.ExecuteNonQuery(updateCommandText, parameters);
     }
 
     public void Delete(IRecipe recipe)
@@ -88,7 +97,7 @@ public class RecipeRepository(SqlConnection connection, IMeasurementRepository m
             new SqlParameter("@id", recipe.Id)
         };
 
-        DB.ExecuteNonQuery(deleteCommandText, parameters);
+        _db.ExecuteNonQuery(deleteCommandText, parameters);
     }
 
     public IRecipe GetById(Guid id)
@@ -100,7 +109,7 @@ public class RecipeRepository(SqlConnection connection, IMeasurementRepository m
             new SqlParameter("@id", id)
         };
 
-        using var reader = DB.ExecuteReader(selectCommandText, parameters);
+        using var reader = _db.ExecuteReader(selectCommandText, parameters);
         if (!reader.Read()) return null;
 
         var recipe = new Recipe
@@ -121,7 +130,7 @@ public class RecipeRepository(SqlConnection connection, IMeasurementRepository m
 
         var recipes = new List<IRecipe>();
 
-        using var reader = DB.ExecuteReader(selectCommandText, Array.Empty<SqlParameter>());
+        using var reader = _db.ExecuteReader(selectCommandText, Array.Empty<SqlParameter>());
         while (reader.Read())
         {
             var recipe = new Recipe
@@ -150,7 +159,7 @@ public class RecipeRepository(SqlConnection connection, IMeasurementRepository m
 
         var recipes = new List<IRecipe>();
 
-        using var reader = DB.ExecuteReader(selectCommandText, parameters);
+        using var reader = _db.ExecuteReader(selectCommandText, parameters);
         while (reader.Read())
         {
             var recipe = new Recipe

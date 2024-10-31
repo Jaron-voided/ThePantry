@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿//using Microsoft.Data.SqlClient;
+using ThePantry.Data;
 using ThePantry.Data.Repositories;
 using ThePantry.Data.SqlServer;
 using ThePantry.Services.Ingredient;
@@ -33,17 +34,18 @@ builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 builder.Services.AddScoped<IRecipeService, RecipeService>();
 
 // Register SqlConnection as a scoped dependency
-builder.Services.AddScoped(provider => 
+//builder.Services.AddScoped(provider => 
+builder.Services.AddSingleton(provider =>
 {
     var configuration = provider.GetRequiredService<IConfiguration>();
     var connectionString = configuration.GetConnectionString("DevelopmentDatabase");
-    var connection = new SqlConnection(connectionString);
+    /*var connection = new SqlConnection(connectionString);
 
     connection.Open(); // Ensure the connection is open when the scope is created
 
-    return connection;
+    return connection;*/
+    return new DB(connectionString);
 });
-
 
 var app = builder.Build();
 
@@ -51,7 +53,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    var configuration = services.GetRequiredService<IConfiguration>();
+    /*var configuration = services.GetRequiredService<IConfiguration>();
     var connectionString = configuration.GetConnectionString("DevelopmentDatabase");
 
     using (var connection = new SqlConnection(connectionString))
@@ -59,7 +61,10 @@ using (var scope = app.Services.CreateScope())
         connection.Open();
         var sqlPantryDatabase = new SqlPantryDatabase();
         sqlPantryDatabase.CreateAllTables();
-    }
+    }*/
+    var db = services.GetRequiredService<DB>();
+    var sqlPantryDatabase = new SqlPantryDatabase(db);
+    sqlPantryDatabase.CreateAllTables();
 }
 
 // Configure the HTTP request pipeline
@@ -69,7 +74,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseCors("AllowReactApp");
 

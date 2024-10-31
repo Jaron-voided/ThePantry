@@ -2,6 +2,12 @@ namespace ThePantry.Data.SqlServer;
 
 public class SqlPantryDatabase : IPantryDatabase
 {
+    private readonly DB _db;
+
+    public SqlPantryDatabase(DB db)
+    {
+        _db = db;
+    }
     public void CreateIngredientTable()
     {
         const string createTableQuery = @"
@@ -15,7 +21,7 @@ public class SqlPantryDatabase : IPantryDatabase
                 MeasurementsPerPackage INT NOT NULL
             );";
 
-        DB.CreateTable(createTableQuery);
+        _db.CreateTable(createTableQuery);
     }
 
     public void CreateMeasurementTable()
@@ -31,7 +37,7 @@ public class SqlPantryDatabase : IPantryDatabase
                 FOREIGN KEY (IngredientId) REFERENCES Ingredient(Id) ON DELETE CASCADE
             );";
 
-        DB.CreateTable(createTableQuery);
+        _db.CreateTable(createTableQuery);
     }
 
     public void CreateRecipeTable()
@@ -48,7 +54,7 @@ public class SqlPantryDatabase : IPantryDatabase
                 PricePerServing DECIMAL(18, 2)
             );";
 
-        DB.CreateTable(createTableQuery);
+        _db.CreateTable(createTableQuery);
     }
 
     public void CreateAllTables()

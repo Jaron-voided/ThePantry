@@ -1,47 +1,59 @@
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
+//using Microsoft.Extensions.Configuration;
 
 namespace ThePantry.Data
 {
-    public static class DB
+    //public static class DB
+    public class DB
     {
-        private static readonly string _connectionString;
-
-        static DB()
+        //private static readonly string _connectionString;
+        private readonly string _connectionString;
+        
+        //static DB()
+        public DB(string connectionString)
         {
-            var configuration = new ConfigurationBuilder()
+            /*var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())  // Ensure the appsettings.json is in the correct directory
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
-            _connectionString = configuration.GetConnectionString("DevelopmentDatabase");
+            _connectionString = configuration.GetConnectionString("DevelopmentDatabase");*/
+            _connectionString = connectionString;
         }
         
-        public static string ConnectionString => _connectionString;
-
-        private static SqlConnection CreateConnection()
+        //public static string ConnectionString => _connectionString;
+        public string ConnectionString => _connectionString;
+        //private static SqlConnection CreateConnection()
+        private SqlConnection CreateConnection()
         {
             var connection = new SqlConnection(ConnectionString);
             connection.Open();
             return connection;
         }
 
-        internal static void CreateTable(string createTableQuery)
+        //internal static void CreateTable(string createTableQuery)
+        internal void CreateTable(string createTableQuery)
         {
             try
             {
+                Console.WriteLine("Creating table...");
                 using var connection = CreateConnection();
                 using var createTableCommand = new SqlCommand(createTableQuery, connection);
-                createTableCommand.ExecuteNonQuery();
+                //createTableCommand.ExecuteNonQuery();
+                var result = createTableCommand.ExecuteNonQuery();
+                Console.WriteLine($"Creating table result: {result}");
             }
-            catch (SqlException ex)
+            //catch (SqlException ex)
+            catch (Exception ex)
             {
                 // Log or handle exception
+                Console.WriteLine($"Failed to create table: {ex.Message}");
                 throw new Exception("Failed to create table: " + ex.Message, ex);
             }
         }
 
-        internal static void ExecuteNonQuery(string commandText, SqlParameter[] parameters)
+//        internal static void ExecuteNonQuery(string commandText, SqlParameter[] parameters)
+        internal void ExecuteNonQuery(string commandText, SqlParameter[] parameters)
         {
             try
             {
@@ -62,7 +74,8 @@ namespace ThePantry.Data
             }
         }
 
-        internal static T ExecuteScalar<T>(string commandText, SqlParameter[] parameters)
+        //internal static T ExecuteScalar<T>(string commandText, SqlParameter[] parameters)
+        internal T ExecuteScalar<T>(string commandText, SqlParameter[] parameters)
         {
             try
             {
@@ -78,7 +91,8 @@ namespace ThePantry.Data
             }
         }
 
-        internal static SqlDataReader ExecuteReader(string commandText, SqlParameter[] parameters)
+        //internal static SqlDataReader ExecuteReader(string commandText, SqlParameter[] parameters)
+        internal SqlDataReader ExecuteReader(string commandText, SqlParameter[] parameters)
         {
             try
             {

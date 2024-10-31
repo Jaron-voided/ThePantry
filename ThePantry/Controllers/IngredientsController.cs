@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Cors;
+//using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using ThePantry.Models.DTOs;
 using ThePantry.Services.Ingredient;
-using ThePantry.Models.Ingredient;
+//using ThePantry.Models.Ingredient;
 
 namespace ThePantry.Controllers;
 
-[EnableCors("AllowReactApp")]
+//[EnableCors("AllowReactApp")]
 [ApiController]
 [Route("api/[controller]")]
 public class IngredientsController(IIngredientService ingredientService) : ControllerBase

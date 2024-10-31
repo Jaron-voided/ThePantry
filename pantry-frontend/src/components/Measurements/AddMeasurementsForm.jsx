@@ -18,7 +18,7 @@ const AddMeasurementsForm = ({ onSubmit, recipeId, finish }) => {
 
     // Fetch the ingredients when the component loads
     useEffect(() => {
-        fetch('https://localhost:5001/api/ingredients')
+        fetch('http://localhost:5000/api/ingredients')
             .then(response => response.json())
             .then(data => setIngredients(data))
             .catch((error) => {

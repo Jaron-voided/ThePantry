@@ -20,7 +20,8 @@ const IngredientsList = () => {
 
 
         // Send delete request to the API
-        fetch(`https://localhost:5001/api/ingredients/${id}`, {
+        //fetch(`https://localhost:5001/api/ingredients/${id}`, {
+        fetch(`http://localhost:5000/api/ingredients/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

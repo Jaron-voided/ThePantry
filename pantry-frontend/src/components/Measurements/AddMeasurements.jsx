@@ -30,8 +30,8 @@ const AddMeasurements = ({ recipeId }) => {
 
 
         // POST to your backend API to add the measurement
-        fetch('https://localhost:5001/api/measurements', {
-            //fetch('http://localhost:5000/api/measurements', {
+        //fetch('https://localhost:5001/api/measurements', {
+        fetch('http://localhost:5000/api/measurements', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -22,8 +22,8 @@ const AddIngredient = () => {
 
 
         // POST to your backend API to add the ingredient
-        fetch('https://localhost:5001/api/ingredients', {
-            //fetch('http://localhost:5000/api/ingredients', {
+        //fetch('https://localhost:5001/api/ingredients', {
+        fetch('http://localhost:5000/api/ingredients', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

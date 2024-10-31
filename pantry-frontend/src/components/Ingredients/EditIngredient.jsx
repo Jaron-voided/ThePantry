@@ -23,15 +23,15 @@ const EditIngredient = () => {
 
 
         // POST to your backend API to edit the ingredient
-        fetch(`https://localhost:5001/api/ingredients/${id}`, {
-            //fetch('http://localhost:5000/api/ingredients', {
+        //fetch(`https://localhost:5001/api/ingredients/${id}`, {
+        fetch(`http://localhost:5000/api/ingredients/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(ingredientDTO)
         })
-            .then((response) => {
+/*            .then((response) => {
                 if (response.ok) {
                     return response.text().then(text => text ? JSON.parse(text) : null);
                 }
@@ -39,7 +39,7 @@ const EditIngredient = () => {
                 return response.text().then(text => {
                     throw new Error(`Failed to edit ingredient: ${text}`);
                 });
-            })
+            })*/
             .then((data) => {
                 console.log('Ingredient edited successfully:', data);
                 // Redirect to IngredientsPage after successful editition
