@@ -5,33 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7995ea46-9f05-4863-9297-87d8f8e45620" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ThePantry/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pantry-frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pantry-frontend/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql-scripts/create-db-and-user.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql-scripts/entrypoint.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Controllers/IngredientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Controllers/IngredientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Controllers/MeasurementsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Controllers/MeasurementsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Controllers/RecipesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Controllers/RecipesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Data/DB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Data/DB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Data/Repositories/IngredientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Data/Repositories/IngredientRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Data/Repositories/MeasurementRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Data/Repositories/MeasurementRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Data/Repositories/RecipeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Data/Repositories/RecipeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Data/SqlServer/SqlPantryDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Data/SqlServer/SqlPantryDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThePantry/Startup/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThePantry/Startup/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pantry-frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/AddIngredient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/AddIngredient.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredient.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredientForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredientForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/IngredientsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/IngredientsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/ViewIngredient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/ViewIngredient.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurements.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurements.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurementsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurementsForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/AddRecipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/AddRecipe.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/ViewRecipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/ViewRecipe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +124,8 @@
       <workItem from="1729685924289" duration="14845000" />
       <workItem from="1730039868499" duration="6190000" />
       <workItem from="1730385626902" duration="1930000" />
+      <workItem from="1730471681444" duration="1780000" />
+      <workItem from="1730491800612" duration="1783000" />
     </task>
     <servers />
   </component>

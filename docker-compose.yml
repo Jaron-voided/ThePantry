@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -5,31 +7,32 @@ services:
     environment:
       - SA_PASSWORD=sPZxKpNKnzmi7P9GXGzdJDRoEBUbRmGjrCQn
       - ACCEPT_EULA=Y
-      - MSSQL_TCP_PORT=1433
     ports:
       - "1433:1433"
     volumes:
       - sqlserverdata:/var/opt/mssql
       - ./sql-scripts:/var/opt/mssql/scripts
     entrypoint: /bin/bash /var/opt/mssql/scripts/entrypoint.sh
+
   dotnet-app:
     build:
       context: ./ThePantry
       dockerfile: Dockerfile
     container_name: api
     environment:
-      - ConnectionStrings__DevelopmentDatabase=Server=sqlserver;Database=the_pantry;User=izaya;Password=N0t0ri0us!;TrustServerCertificate=True
+      - ConnectionStrings__DevelopmentDatabase=Server=sqlserver;Database=the_pantry;User=sa;Password=sPZxKpNKnzmi7P9GXGzdJDRoEBUbRmGjrCQn;TrustServerCertificate=True
     depends_on:
       - sqlserver
     ports:
       - "5000:8080"
+
   vite-react-app:
     build:
       context: ./pantry-frontend
       dockerfile: Dockerfile
     container_name: frontend
     ports:
-      - "5173:80"
+      - "80:80"
 
 volumes:
   sqlserverdata:
