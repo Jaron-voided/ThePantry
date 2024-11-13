@@ -1,4 +1,4 @@
-name: Deploy Frontend to Azure Web App
+name: Deploy Frontend
 
 on:
   push:
@@ -8,25 +8,33 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup Node
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16.x'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-    - name: Install and Build Frontend
-      run: |
-        cd pantry-frontend
-        npm install
-        npm run build
+      - name: Install dependencies
+        run: npm install
+        working-directory: pantry-frontend
 
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: pantry-frontend-webapp
-        slot-name: production
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_FRONTEND }}
-        package: pantry-frontend/build
+      - name: Build React app
+        run: npm run build
+        working-directory: pantry-frontend
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: pantry-frontend-webapp
+          slot-name: production
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_FRONTEND }}
+          package: pantry-frontend/build
