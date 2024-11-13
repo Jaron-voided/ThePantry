@@ -1,4 +1,4 @@
-name: Deploy Frontend
+name: Build and Deploy Frontend
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,20 +15,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '16'  # Specify the Node.js version your project needs
 
       - name: Install dependencies
-        run: npm install
-        working-directory: pantry-frontend
+        run: |
+          cd pantry-frontend
+          npm install
 
-      - name: Build React app
-        run: npm run build
-        working-directory: pantry-frontend
-
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Build frontend
+        run: |
+          cd pantry-frontend
+          npm run build  # This should generate the build folder in pantry-frontend/build
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
