@@ -1,4 +1,4 @@
-name: Deploy Backend to Azure Web App
+name: Deploy Backend
 
 on:
   push:
@@ -8,24 +8,34 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: '7.x'
+      - name: Set up .NET 8.0 SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Publish .NET Core Backend
-      run: |
-        cd ThePantry
-        dotnet publish -c Release -o release
+      - name: Install dependencies
+        run: dotnet restore ThePantry/ThePantry.csproj
 
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: pantry-backend-webapp
-        slot-name: production
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_BACKEND }}
-        package: ThePantry/release
+      - name: Build project
+        run: dotnet build --no-restore ThePantry/ThePantry.csproj
+
+      - name: Publish project
+        run: dotnet publish -c Release -o publish ThePantry/ThePantry.csproj
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: pantry-backend-webapp
+          slot-name: production
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_BACKEND }}
+          package: publish
