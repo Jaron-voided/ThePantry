@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: pantry-frontend-webapp
         slot-name: production
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_FRONTEND }}
         package: pantry-frontend/build
