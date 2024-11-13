@@ -8,10 +8,10 @@ services:
       - SA_PASSWORD=sPZxKpNKnzmi7P9GXGzdJDRoEBUbRmGjrCQn
       - ACCEPT_EULA=Y
     ports:
-      - "1433:1433"
+      - "1433:1433"  # External and internal port both set to 1433
     volumes:
       - sqlserverdata:/var/opt/mssql
-      - ./sql-scripts:/var/opt/mssql/scripts
+      - ./sql-scripts:/var/opt/mssql/scripts  # Mounts your scripts folder
     entrypoint: /bin/bash /var/opt/mssql/scripts/entrypoint.sh
 
   dotnet-app:
@@ -20,11 +20,11 @@ services:
       dockerfile: Dockerfile
     container_name: api
     environment:
-      - ConnectionStrings__DevelopmentDatabase=Server=sqlserver;Database=the_pantry;User=sa;Password=sPZxKpNKnzmi7P9GXGzdJDRoEBUbRmGjrCQn;TrustServerCertificate=True
+      - ConnectionStrings__DevelopmentDatabase=Server=tcp:pantry-sql-webapp.azurewebsites.net,1433;Initial Catalog=the_pantry;Persist Security Info=False;User ID=sa;Password=sPZxKpNKnzmi7P9GXGzdJDRoEBUbRmGjrCQn;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;    
     depends_on:
       - sqlserver
     ports:
-      - "5000:8080"
+      - "5000:5000"  # Both external and internal port set to 5000
 
   vite-react-app:
     build:
@@ -32,7 +32,7 @@ services:
       dockerfile: Dockerfile
     container_name: frontend
     ports:
-      - "80:80"
+      - "80:80"  # Maps frontend to localhost:80; change to "3000:80" if testing locally
 
 volumes:
   sqlserverdata:

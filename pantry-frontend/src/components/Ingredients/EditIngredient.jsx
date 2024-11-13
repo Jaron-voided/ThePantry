@@ -24,7 +24,7 @@ const EditIngredient = () => {
 
         // POST to your backend API to edit the ingredient
         //fetch(`https://localhost:5001/api/ingredients/${id}`, {
-        fetch(`http://localhost:5000/api/ingredients/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/ingredients/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

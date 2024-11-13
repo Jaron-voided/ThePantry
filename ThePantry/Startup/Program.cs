@@ -8,17 +8,37 @@ using ThePantry.Services.Recipe;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// CORS policy
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp",
+    options.AddPolicy("AllowAll",
+        policy => policy
+            .AllowAnyOrigin() // Allow all origins
+            .AllowAnyMethod() // Allow all HTTP methods (GET, POST, etc.)
+            .AllowAnyHeader()); // Allow all headers
+});
+
+
+// CORS policy
+/*builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
         builder => builder
-            .WithOrigins("http://localhost:5173")
+            .AllowAnyOrigin()
             //.AllowAnyOrigin()
             .AllowAnyMethod()
             .AllowAnyHeader());
             //.AllowCredentials());
-});
+});*/
+
+/*builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("https://pantry-frontend-webapp.azurewebsites.net")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});*/
 
 // Add services to the container
 builder.Services.AddControllers();
@@ -49,6 +69,9 @@ builder.Services.AddSingleton(provider =>
 
 var app = builder.Build();
 
+//app.UseCors("AllowFrontend");
+app.UseCors("AllowAll");
+
 // Create tables when the application starts**
 using (var scope = app.Services.CreateScope())
 {
@@ -76,7 +99,6 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
-app.UseCors("AllowReactApp");
 
 app.UseAuthorization();
 app.MapControllers();

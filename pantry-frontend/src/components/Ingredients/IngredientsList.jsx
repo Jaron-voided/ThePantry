@@ -21,7 +21,7 @@ const IngredientsList = () => {
 
         // Send delete request to the API
         //fetch(`https://localhost:5001/api/ingredients/${id}`, {
-        fetch(`http://localhost:5000/api/ingredients/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/ingredients/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

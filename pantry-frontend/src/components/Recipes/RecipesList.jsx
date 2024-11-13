@@ -72,7 +72,7 @@ const RecipesList = ({ sortByCategory, priceSortOrder, selectedIngredient }) => 
 
         // Delete the measurements for the recipe
 
-        fetch(`http://localhost:5000/api/measurements?recipeId=${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/measurements?recipeId=${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

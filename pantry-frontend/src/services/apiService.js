@@ -6,7 +6,7 @@ console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
 // Create an axios instance with the base URL from the .env file
 const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
-    //baseURL: 'http://localhost:5000/api',
+    //baseURL: `${import.meta.env.VITE_API_URL}/api',
 })
 
 // Function to fetch ingredients

@@ -14,7 +14,7 @@ const ViewRecipe = () => {
 
     // Fetch recipe details
     useEffect(() => {
-        fetch(`http://localhost:5000/api/recipes/${id}`, )
+        fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`, )
             .then((response) => {
                 if (response.ok) {
                     return response.json();
@@ -28,7 +28,7 @@ const ViewRecipe = () => {
     // Fetch the total price for the recipe
     useEffect(() => {
         if (recipe && recipe.id) {
-            fetch(`http://localhost:5000/api/recipes/totalPrice/${recipe.id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/api/recipes/totalPrice/${recipe.id}`)
                 .then((response) => {
                     if (response.ok) {
                         return response.json();
@@ -43,7 +43,7 @@ const ViewRecipe = () => {
     // Fetch the price per serving for the recipe
     useEffect(() => {
         if (recipe && recipe.id) {
-            fetch(`http://localhost:5000/api/recipes/pricePerServing/${recipe.id}`, )
+            fetch(`${import.meta.env.VITE_API_URL}/api/recipes/pricePerServing/${recipe.id}`, )
                 .then((response) => {
                     if (response.ok) {
                         return response.json();
@@ -59,7 +59,7 @@ const ViewRecipe = () => {
     // Fetch the measurements for the recipe
     useEffect(() => {
         if (recipe && recipe.id) {
-            fetch(`http://localhost:5000/api/measurements?recipeId=${recipe.id}`)//this looks different then normal because its passing data to the api
+            fetch(`${import.meta.env.VITE_API_URL}/api/measurements?recipeId=${recipe.id}`)//this looks different then normal because its passing data to the api
                 //recipeId=${recipe.id} is the actual query parameter, where recipeId is the key and ${recipe.id} is the value you're passing (using template literals to dynamically insert recipe.id).
                 .then((response) => {
                     if (response.ok) {
@@ -83,7 +83,7 @@ const ViewRecipe = () => {
     // Fetch ingredient names based on their IDs
     const fetchIngredients = (ingredientIds) => {
         Promise.all(ingredientIds.map(id =>
-            fetch(`http://localhost:5000/api/ingredients/${id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/api/ingredients/${id}`)
                 .then(response => response.json())
         )).then(ingredientData => {
             const ingredientMap = ingredientData.reduce((map, ingredient) => {

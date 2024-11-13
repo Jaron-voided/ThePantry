@@ -9,7 +9,7 @@ const ViewIngredient = () => {
 
     useEffect(() => {
         // Fetch Ingredient details from the API
-        fetch(`http://localhost:5000/api/ingredients/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/ingredients/${id}`)
             .then((response) => {
                 if (response.ok) {
                     return response.json();

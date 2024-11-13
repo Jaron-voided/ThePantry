@@ -37,7 +37,7 @@ const EditRecipe = () => {
 
         // PUT to your backend API to add the recipe
         fetch(`https://localhost:5001/api/recipes/${recipeData.id}`, {
-            //fetch('http://localhost:5000/api/recipes', {
+            //fetch(`${import.meta.env.VITE_API_URL}/api/recipes', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,21 +1,24 @@
-# Base image for Vite/React
+# Use Node for building the Vite/React frontend
 FROM node:18 AS build
 WORKDIR /app
 
 # Install dependencies
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json package-lock.json ./
 RUN npm install
 
-# Build the Vite app
+# Copy the remaining files and build the project
 COPY . .
 RUN npm run build
 
-# Use an nginx container to serve the built static files
+# Use a lightweight Nginx image to serve the static files
 FROM nginx:alpine
+# Copy the build output to Nginx's default html directory
 COPY --from=build /app/dist /usr/share/nginx/html
+
+# Add a basic Nginx configuration file
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# this is new
+# Expose port 80 to the outside world
 EXPOSE 80
+# Run Nginx in the foreground (needed for containerization)
 CMD ["nginx", "-g", "daemon off;"]

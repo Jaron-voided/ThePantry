@@ -18,7 +18,7 @@ const AddMeasurementsForm = ({ onSubmit, recipeId, finish }) => {
 
     // Fetch the ingredients when the component loads
     useEffect(() => {
-        fetch('http://localhost:5000/api/ingredients')
+        fetch(`${import.meta.env.VITE_API_URL}/api/ingredients`)
             .then(response => response.json())
             .then(data => setIngredients(data))
             .catch((error) => {
