@@ -92,7 +92,7 @@ const RecipesList = ({ sortByCategory, priceSortOrder, selectedIngredient }) => 
             .catch((error) => console.error('Error deleting measurement:', error));
 
         // Then delete the recipe itself
-        fetch(`https://localhost:5001/api/recipes/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -166,7 +166,7 @@ const RecipesList = () => {
 
         // Delete the measurements for the recipe
 
-        fetch(`https://localhost:5001/api/measurements?recipeId=${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/measurements?recipeId=${id}`, {
             method: 'DELETE',
                 headers: {
                 'Content-Type': 'application/json'
@@ -186,7 +186,7 @@ const RecipesList = () => {
             .catch((error) => console.error('Error deleting measurement:', error));
 
         // Then delete the recipe itself
-        fetch(`https://localhost:5001/api/recipes/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

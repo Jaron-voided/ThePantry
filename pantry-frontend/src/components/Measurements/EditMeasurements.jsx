@@ -10,7 +10,7 @@ const EditMeasurements = () => {
 
     // Fetch the existing measurements for the recipe
     useEffect(() => {
-        fetch(`https://localhost:5001/api/recipes/${recipeId}/measurements`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${recipeId}/measurements`)
             .then(response => response.json())
             .then(data => setExistingMeasurements(data))
             .catch((error) => {
@@ -32,7 +32,7 @@ const EditMeasurements = () => {
 
     // Handle submitting the updated measurements
     const handleSubmit = (updatedMeasurements) => {
-        return fetch(`https://localhost:5001/api/recipes/${recipeId}/measurements`, {
+        return fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${recipeId}/measurements`, {
             method: 'PUT',  // Or POST, depending on your backend logic
             headers: {
                 'Content-Type': 'application/json'

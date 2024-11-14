@@ -36,7 +36,7 @@ const EditRecipe = () => {
 
 
         // PUT to your backend API to add the recipe
-        fetch(`https://localhost:5001/api/recipes/${recipeData.id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${recipeData.id}`, {
             //fetch(`${import.meta.env.VITE_API_URL}/api/recipes', {
             method: 'PUT',
             headers: {
@@ -62,7 +62,7 @@ const EditRecipe = () => {
                 const recipeId = recipeData.id;
 
                 // Delete existing measurements for the recipe
-                fetch(`https://localhost:5001/api/measurements/byRecipe/${recipeId}`, {
+                fetch(`${import.meta.env.VITE_API_URL}/api/measurements/byRecipe/${recipeId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

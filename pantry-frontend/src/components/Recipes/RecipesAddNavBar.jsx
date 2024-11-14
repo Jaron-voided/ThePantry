@@ -20,7 +20,7 @@ const RecipesAddNavbar = ({
 
     // Fetch the ingredients when the component loads
     useEffect(() => {
-        fetch('https://localhost:5001/api/ingredients')
+        fetch(`${import.meta.env.VITE_API_URL}/api/ingredients`)
             .then(response => response.json())
             .then(data => {
                 setIngredients(data);

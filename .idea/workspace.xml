@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7995ea46-9f05-4863-9297-87d8f8e45620" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/azure-webapp-frontend.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/azure-webapp-frontend.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pantry-frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/EditMeasurements.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/EditMeasurements.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipeForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesAddNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesAddNavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,34 +38,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.All in IngredientRequests.executor": "Run",
-    "HTTP Request.All in MeasurementRequests (1).executor": "Run",
-    "HTTP Request.All in MeasurementRequests.executor": "Run",
-    "HTTP Request.All in RecipeRequests (1).executor": "Run",
-    "HTTP Request.All in RecipeRequests.executor": "Run",
-    "HTTP Request.IngredientRequests | Add 20 Ingredients ######.executor": "Run",
-    "HTTP Request.RetrieveRequests | #2 (1).executor": "Run",
-    "HTTP Request.RetrieveRequests | #2.executor": "Run",
-    "HTTP Request.RetrieveRequests | #3.executor": "Run",
-    "HTTP Request.RetrieveRequests | Get All Ingredients ###### (1).executor": "Run",
-    "HTTP Request.RetrieveRequests | Get All Ingredients ######.executor": "Run",
-    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/zeref-dragneel/RiderProjects/ThePantry",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/snap/webstorm/420/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.All in IngredientRequests.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in MeasurementRequests (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in MeasurementRequests.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in RecipeRequests (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.All in RecipeRequests.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.IngredientRequests | Add 20 Ingredients ######.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | #2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | #2.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | #3.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | Get All Ingredients ###### (1).executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.RetrieveRequests | Get All Ingredients ######.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/zeref-dragneel/RiderProjects/ThePantry&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/420/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pantry-frontend/src/app/layout/styles/measurements" />
@@ -130,6 +133,7 @@
       <workItem from="1730648159925" duration="7444000" />
       <workItem from="1731589427800" duration="1203000" />
       <workItem from="1731591251685" duration="143000" />
+      <workItem from="1731592152370" duration="1134000" />
     </task>
     <servers />
   </component>
