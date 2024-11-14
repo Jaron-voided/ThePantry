@@ -25,7 +25,7 @@ jobs:
       - name: Build frontend
         run: |
           cd pantry-frontend
-          npm run build  # This should generate the build folder in pantry-frontend/build
+          npx vite build  # This should generate the build folder in pantry-frontend/build
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
@@ -33,4 +33,4 @@ jobs:
           app-name: pantry-frontend-webapp
           slot-name: production
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_FRONTEND }}
-          package: ./pantry-frontend/build
+          package: pantry-frontend/build
