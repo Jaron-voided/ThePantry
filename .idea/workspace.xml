@@ -6,11 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="7995ea46-9f05-4863-9297-87d8f8e45620" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredient.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredientForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/EditIngredientForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/ViewIngredient.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Ingredients/ViewIngredient.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurements.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurements.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurementsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/AddMeasurementsForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/EditMeasurements.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Measurements/EditMeasurements.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/AddRecipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/AddRecipe.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipe.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/EditRecipeForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesAddNavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesAddNavBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/RecipesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/ViewRecipe.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pantry-frontend/src/components/Recipes/ViewRecipe.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +140,7 @@
       <workItem from="1730648159925" duration="7444000" />
       <workItem from="1731589427800" duration="1203000" />
       <workItem from="1731591251685" duration="143000" />
-      <workItem from="1731592152370" duration="1134000" />
+      <workItem from="1731592152370" duration="1826000" />
     </task>
     <servers />
   </component>

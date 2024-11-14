@@ -32,7 +32,7 @@ const EditRecipeForm = ({ onSubmit }) => {
 
     useEffect(() => {
         // Fetch Recipe details from the API
-        fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/recipes/${id}`)
             .then((response) => {
                 if (response.ok) {
                     return response.json();
@@ -56,7 +56,7 @@ const EditRecipeForm = ({ onSubmit }) => {
     // Fetch the measurements for the recipe
     useEffect(() => {
         if (recipe && recipe.id) {
-            fetch(`${import.meta.env.VITE_API_URL}/api/measurements?recipeId=${recipe.id}`)//this looks different then normal because its passing data to the api
+            fetch(`${import.meta.env.VITE_API_URL}/measurements?recipeId=${recipe.id}`)//this looks different then normal because its passing data to the api
                 //recipeId=${recipe.id} is the actual query parameter, where recipeId is the key and ${recipe.id} is the value you're passing (using template literals to dynamically insert recipe.id).
                 .then((response) => {
                     if (response.ok) {
@@ -80,7 +80,7 @@ const EditRecipeForm = ({ onSubmit }) => {
     // Fetch ingredient names based on their IDs
     const fetchIngredients = (ingredientIds) => {
         Promise.all(ingredientIds.map(id =>
-            fetch(`${import.meta.env.VITE_API_URL}/api/ingredients/${id}`)
+            fetch(`${import.meta.env.VITE_API_URL}/ingredients/${id}`)
                 .then(response => response.json())
         )).then(ingredientData => {
             const ingredientMap = ingredientData.reduce((map, ingredient) => {

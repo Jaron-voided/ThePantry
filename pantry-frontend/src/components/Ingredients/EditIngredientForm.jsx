@@ -36,8 +36,8 @@ const EditIngredientForm = ({ onSubmit }) => {
 
     useEffect(() => {
         // Fetch Ingredient details from the API
-        //fetch(`https://localhost:5001/api/ingredients/${id}`)
-        fetch(`${import.meta.env.VITE_API_URL}/api/ingredients/${id}`)
+        //fetch(`https://localhost:5001/ingredients/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/ingredients/${id}`)
 
             .then((response) => {
                 if (response.ok) {

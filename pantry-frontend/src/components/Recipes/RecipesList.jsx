@@ -72,7 +72,7 @@ const RecipesList = ({ sortByCategory, priceSortOrder, selectedIngredient }) => 
 
         // Delete the measurements for the recipe
 
-        fetch(`${import.meta.env.VITE_API_URL}/api/measurements?recipeId=${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/measurements?recipeId=${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -92,7 +92,7 @@ const RecipesList = ({ sortByCategory, priceSortOrder, selectedIngredient }) => 
             .catch((error) => console.error('Error deleting measurement:', error));
 
         // Then delete the recipe itself
-        fetch(`${import.meta.env.VITE_API_URL}/api/recipes/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/recipes/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -146,7 +146,7 @@ export default RecipesList;
 /*
 import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
-import {getRecipes} from "../../services/apiService.js";
+import {getRecipes} from "../../servicesService.js";
 
 const RecipesList = () => {
     const [recipes, setRecipes] = useState([]);

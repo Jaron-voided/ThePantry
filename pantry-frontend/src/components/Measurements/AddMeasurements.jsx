@@ -30,8 +30,8 @@ const AddMeasurements = ({ recipeId }) => {
 
 
         // POST to your backend API to add the measurement
-        //fetch('https://localhost:5001/api/measurements', {
-        fetch(`${import.meta.env.VITE_API_URL}/api/measurements`, {
+        //fetch('https://localhost:5001/measurements', {
+        fetch(`${import.meta.env.VITE_API_URL}/measurements`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

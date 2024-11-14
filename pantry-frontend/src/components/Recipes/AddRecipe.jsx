@@ -27,8 +27,8 @@ const AddRecipe = () => {
 
 
         // POST to your backend API to add the recipe
-        //fetch('https://localhost:5001/api/recipes', {
-        fetch(`${import.meta.env.VITE_API_URL}/api/recipes`, {
+        //fetch('https://localhost:5001/recipes', {
+        fetch(`${import.meta.env.VITE_API_URL}/recipes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
